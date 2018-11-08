@@ -4,37 +4,37 @@ Add loot boxes to the game and gamble for the ultimate prizes!
 
 Buy loot boxes from traders or build a mysterious red chest and exchange gold and silver to buy different kinds of loot boxes with different items in them.
 
-#### Treasure chest
+### Treasure chest
 A small loot box which contains valuable items like silver, gold, or thrumbo horns. There may even be a golden chest in it!
 
-*A golden treasure chest. Fort knox in a box! Become the richest colony in the galaxy with a little bit of luck!*
+*» A golden treasure chest. Fort knox in a box! Become the richest colony in the galaxy with a little bit of luck!*
 
-#### Small common chest
+### Small common chest
 A simple small loot box which contains items which help you at the start of the game. Food, material, some valueables, apparel, even weapons and more.
 
-*A small common loot box. Open it and get a change to recive powerful and valuable items!*
+*» A small common loot box. Open it and get a change to recive powerful and valuable items!*
 
-#### Large common chest
+### Large common chest
 A simple large loot box. This one can contain many different items. With some luck you can get enough material to build a small base, weapons to arm your whole colony or some really rare artefacts.
 
-*A large common loot box. The true test of luck! Open it and you may get something awesome or many useful items. Or both!*
+*» A large common loot box. The true test of luck! Open it and you may get something awesome or many useful items. Or both!*
 
-#### Small golden chest
+### Small golden chest
 The small golden chest maybe small but it has it all! You can get valuables, rare artefacts, archotech stuff, advanced armor or high-tech weapons. There can even be multiple power armor sets in it. Don't ask how they fit in such a small box.
 
-*A small golden loot box. There may be some really lice stuff in here! Get a change to recive some of the best items on the rim!*
+*» A small golden loot box. There may be some really lice stuff in here! Get a change to recive some of the best items on the rim!*
 
-#### Large golden chest
+### Large golden chest
 The large golden chest contains even more stuff than the small one. Naturally. And to top that, there is also more better stuff in it. The true loot box for advanced colonies.
 
-*A large golden loot box. Fulfill all your dreams with this extraordinary loot crate! The highest chance to get the best and most expensive items!*
+*» A large golden loot box. Fulfill all your dreams with this extraordinary loot crate! The highest chance to get the best and most expensive items!*
 
-#### Pandoras box
+### Pandoras box
 Pandoras box. Who knows hat will happen if you open one.
 
-*Pandoras box. What may be in here?*
+*» Pandoras box. What may be in here?*
 
-### Notes
+## Notes
 
 Can be added to existing saves. To remove it, be sure to remove all objects from this mod from your world first. (Like the loot boxes itself, of course you can keep the loot you got out of them.)
 
