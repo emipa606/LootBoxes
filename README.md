@@ -39,3 +39,7 @@ Pandoras box. Who knows hat will happen if you open one.
 Can be added to existing saves. To remove it, be sure to remove all objects from this mod from your world first. (Like the loot boxes itself, of course you can keep the loot you got out of them.)
 
 Art made by Vagabond. Check out his Goblin mod https://steamcommunity.com/sharedfiles/filedetails/?id=1465072243
+
+## Another note (to be safe)
+There are **no** microtransactions. You can't buy the loot boxes from this mod with real money. They are ingame items in a single player game added for fun. There is no need to gamble to get any item like there may be in multiplayer games with "real" loot boxes. Every player *could* use the development tools to give themselves every item they want.
+
