@@ -1,0 +1,23 @@
+
+# Private files and notes
+
+/_*/
+
+todo.txt
+
+
+# User-specific files
+
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.userprefs
+
+
+# Build results
+
+/Source/[Bb]in/
+/Source/[Oo]bj/
+/Source/[Ll]og/

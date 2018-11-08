@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Manifest>
+	<identifier>LootBoxes</identifier>
+	<version>1.0.0</version>
+	<showCrossPromotions>true</showCrossPromotions>
+	<manifestUri>https://raw.githubusercontent.com/Lanilor/Rimworld-Loot-Boxes/master/About/Manifest.xml</manifestUri>
+	<downloadUri>https://github.com/Lanilor/Rimworld-Loot-Boxes/releases/latest</downloadUri>
+</Manifest>
