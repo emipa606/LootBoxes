@@ -3,6 +3,7 @@
 Add loot boxes and Pandoras box to the game and gamble for the ultimate treasure and challenges!
 
 Buy loot boxes from traders or build a mysterious red chest and exchange gold and silver for different kinds of loot boxes with different items in them.
+
 Now with an improved Pandoras box! Opening one spawns incidents and can bless your colony or lead it into disaster.
 
 ### Treasure chest
