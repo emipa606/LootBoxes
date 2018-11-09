@@ -52,7 +52,7 @@
 	<ThingDef ParentName="LootBoxBase">
 		<defName>LootBoxSilverSmall</defName>
 		<label>small common chest</label>
-		<description>A small common loot box. Open it and get a change to recive powerful and valuable items!</description>
+		<description>A small common loot box. Open it and get a change to receive powerful and valuable items!</description>
 		<graphicData>
 			<texPath>Things/Item/LootBox/SilverSmall</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -93,7 +93,7 @@
 	<ThingDef ParentName="LootBoxBase">
 		<defName>LootBoxGoldSmall</defName>
 		<label>small golden chest</label>
-		<description>A small golden loot box. There may be some really lice stuff in here! Get a change to recive some of the best items on the rim!</description>
+		<description>A small golden loot box. There may be some really nice stuff in here! Get a change to receive some of the best items on the rim!</description>
 		<graphicData>
 			<texPath>Things/Item/LootBox/GoldSmall</texPath>
 			<graphicClass>Graphic_Single</graphicClass>

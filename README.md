@@ -14,7 +14,7 @@ A small loot box which contains valuable items like silver, gold, or thrumbo hor
 ### Small common chest
 A simple small loot box which contains items which help you at the start of the game. Food, material, some valueables, apparel, even weapons and more.
 
-*» A small common loot box. Open it and get a change to recive powerful and valuable items!*
+*» A small common loot box. Open it and get a change to receive powerful and valuable items!*
 
 ### Large common chest
 A simple large loot box. This one can contain many different items. With some luck you can get enough material to build a small base, weapons to arm your whole colony or some really rare artefacts.
@@ -24,7 +24,7 @@ A simple large loot box. This one can contain many different items. With some lu
 ### Small golden chest
 The small golden chest maybe small but it has it all! You can get valuables, rare artefacts, archotech stuff, advanced armor or high-tech weapons. There can even be multiple power armor sets in it. Don't ask how they fit in such a small box.
 
-*» A small golden loot box. There may be some really nice stuff in here! Get a change to recive some of the best items on the rim!*
+*» A small golden loot box. There may be some really nice stuff in here! Get a change to receive some of the best items on the rim!*
 
 ### Large golden chest
 The large golden chest contains even more stuff than the small one. Naturally. And to top that, there is also more better stuff in it. The true loot box for advanced colonies.
