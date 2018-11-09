@@ -140,7 +140,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
-			<MarketValue>200</MarketValue>
+			<MarketValue>400</MarketValue>
 			<MaxHitPoints>60</MaxHitPoints>
 		</statBases>
 		<drawGUIOverlay>false</drawGUIOverlay>
