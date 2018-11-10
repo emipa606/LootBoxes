@@ -50,7 +50,7 @@ namespace LootBoxes
             string[] arr = GenMagic.Magic(LootTable).Split('|');
             int setsMin = int.Parse(arr[0]);
             int setsMax = int.Parse(arr[1]);
-            int setsCount = Rand.RangeInclusive(setsMin, Rand.RangeInclusive(setsMin, setsMax));
+            int setsCount = GenMagic.GetRealCount(parent, Rand.RangeInclusive(setsMin, Rand.RangeInclusive(setsMin, setsMax)));
             //Log.Message("min: " + setsMin + ", max: " + setsMax + ", final: " + setsCount);
             for (int i = 2, iLen = arr.Length; i < iLen; i++)
             {

@@ -14,12 +14,13 @@ namespace LootBoxes
             {
                 { new List<IncidentCategoryDef>() { IncidentCategoryDefOf.ShipChunkDrop, IncidentCategoryDefOf.OrbitalVisitor, IncidentCategoryDefOf.FactionArrival, IncidentCategoryDefOf.Misc }, new IncidentGroupData(0.30f, 1, 3, 6  ) }, // Good and neutral
                 { new List<IncidentCategoryDef>() { IncidentCategoryDefOf.ShipChunkDrop, IncidentCategoryDefOf.OrbitalVisitor, IncidentCategoryDefOf.ThreatSmall, IncidentCategoryDefOf.Misc, IncidentCategoryDefOf.DiseaseHuman, IncidentCategoryDefOf.DiseaseAnimal }, new IncidentGroupData(0.20f, 2, 5, 9 ) }, // Neutral to slightly bad
-                { new List<IncidentCategoryDef>() { IncidentCategoryDefOf.ShipChunkDrop, IncidentCategoryDefOf.ThreatBig, IncidentCategoryDefOf.ThreatSmall, IncidentCategoryDefOf.Misc, IncidentCategoryDefOf.DiseaseHuman, IncidentCategoryDefOf.DiseaseAnimal }, new IncidentGroupData(0.50f, 1, 4, 8 ) } // Bad and neutral
+                { new List<IncidentCategoryDef>() { IncidentCategoryDefOf.ShipChunkDrop, IncidentCategoryDefOf.ThreatBig, IncidentCategoryDefOf.ThreatSmall, IncidentCategoryDefOf.Misc, IncidentCategoryDefOf.DiseaseHuman, IncidentCategoryDefOf.DiseaseAnimal }, new IncidentGroupData(0.50f, 1, 3, 7 ) } // Bad and neutral
             };
 
         protected override void OpenBox(Pawn usedBy)
         {
             Map map = usedBy.Map;
+            Rand.PushState(parent.HashOffset());
             bool hostileActivity = GenHostility.AnyHostileActiveThreatToPlayer(map);
             KeyValuePair<List<IncidentCategoryDef>, IncidentGroupData> selectedGroup = incidentGroups.RandomElementByWeight(kvp => kvp.Value.chance);
             while (hostileActivity && selectedGroup.Key.Contains(IncidentCategoryDefOf.FactionArrival))
@@ -53,6 +54,7 @@ namespace LootBoxes
                     selectedIncident.Worker.TryExecute(parms);
                 }
             }
+            Rand.PopState();
         }
 
         private float IncidentChanceFinal(IncidentDef def)

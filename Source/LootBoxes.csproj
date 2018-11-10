@@ -51,8 +51,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DefOf\ThingDefOf.cs" />
     <Compile Include="Gen\GenMagic.cs" />
+    <Compile Include="Harmony\Harmony_ThingSetMaker_MapGen_AncientPodContents.cs" />
     <Compile Include="Harmony\Harmony_LootBox.cs" />
+    <Compile Include="Mod\Mod_LootBoxes.cs" />
+    <Compile Include="Mod\ModSettings_LootBoxes.cs" />
     <Compile Include="Thing\CompUseEffect_LootBox.cs" />
     <Compile Include="DefOf\RecordDefOf.cs" />
     <Compile Include="Harmony\Harmony.cs" />
