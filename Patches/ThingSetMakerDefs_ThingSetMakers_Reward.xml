@@ -5,7 +5,7 @@
 		<xpath>/Defs/ThingSetMakerDef[defName="Reward_StandardByDropPod"]/root/options</xpath>
 		<value>
 			<li>
-				<weight>2</weight>
+				<weight>1</weight>
 				<thingSetMaker Class="ThingSetMaker_MarketValue">
 					<fixedParams>
 						<filter>
@@ -21,16 +21,16 @@
 				</thingSetMaker>
 			</li>
 			<li>
-				<weight>2</weight>
+				<weight>1</weight>
 				<thingSetMaker Class="ThingSetMaker_MarketValue">
 					<fixedParams>
 						<filter>
 							<categories>
 								<li>LootBoxes</li>
 							</categories>
-							<thingDefs>
+							<disallowedThingDefs>
 								<li>LootBoxSilverSmall</li>
-							</thingDefs>
+							</disallowedThingDefs>
 							<thingSetMakerTagsToDisallow>
 								<li>RewardSpecial</li>
 								<li>AnimalPart</li>
@@ -46,7 +46,7 @@
 		<xpath>/Defs/ThingSetMakerDef[defName="Reward_ItemStashQuestContents"]/root/options</xpath>
 		<value>
 			<li>
-				<weight>4</weight>
+				<weight>2</weight>
 				<thingSetMaker Class="ThingSetMaker_MarketValue">
 					<fixedParams>
 						<filter>
@@ -62,16 +62,16 @@
 				</thingSetMaker>
 			</li>
 			<li>
-				<weight>12</weight>
+				<weight>5</weight>
 				<thingSetMaker Class="ThingSetMaker_MarketValue">
 					<fixedParams>
 						<filter>
 							<categories>
 								<li>LootBoxes</li>
 							</categories>
-							<thingDefs>
+							<disallowedThingDefs>
 								<li>LootBoxSilverSmall</li>
-							</thingDefs>
+							</disallowedThingDefs>
 							<thingSetMakerTagsToDisallow>
 								<li>RewardSpecial</li>
 								<li>AnimalPart</li>
@@ -87,7 +87,7 @@
 		<xpath>/Defs/ThingSetMakerDef[defName="Reward_TradeRequest"]/root/options</xpath>
 		<value>
 			<li>
-				<weight>3</weight>
+				<weight>1</weight>
 				<thingSetMaker Class="ThingSetMaker_MarketValue">
 					<fixedParams>
 						<filter>
@@ -103,16 +103,16 @@
 				</thingSetMaker>
 			</li>
 			<li>
-				<weight>3</weight>
+				<weight>2</weight>
 				<thingSetMaker Class="ThingSetMaker_MarketValue">
 					<fixedParams>
 						<filter>
 							<categories>
 								<li>LootBoxes</li>
 							</categories>
-							<thingDefs>
+							<disallowedThingDefs>
 								<li>LootBoxSilverSmall</li>
-							</thingDefs>
+							</disallowedThingDefs>
 							<thingSetMakerTagsToDisallow>
 								<li>RewardSpecial</li>
 								<li>AnimalPart</li>
@@ -128,7 +128,7 @@
 		<xpath>/Defs/ThingSetMakerDef[defName="Reward_PeaceTalksGift"]/root/options</xpath>
 		<value>
 			<li>
-				<weight>3</weight>
+				<weight>1</weight>
 				<thingSetMaker Class="ThingSetMaker_MarketValue">
 					<fixedParams>
 						<filter>
@@ -144,16 +144,16 @@
 				</thingSetMaker>
 			</li>
 			<li>
-				<weight>6</weight>
+				<weight>3</weight>
 				<thingSetMaker Class="ThingSetMaker_MarketValue">
 					<fixedParams>
 						<filter>
 							<categories>
 								<li>LootBoxes</li>
 							</categories>
-							<thingDefs>
+							<disallowedThingDefs>
 								<li>LootBoxSilverSmall</li>
-							</thingDefs>
+							</disallowedThingDefs>
 							<thingSetMakerTagsToDisallow>
 								<li>RewardSpecial</li>
 								<li>AnimalPart</li>
