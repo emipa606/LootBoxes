@@ -3,7 +3,7 @@
 
 	<RecipeDef Name="MakeLootBoxBase" Abstract="True">
 		<jobString>Getting loot box.</jobString>
-		<workSpeedStat>UnskilledLaborSpeed</workSpeedStat>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
 		<!--<effectWorking>Tailor</effectWorking>
 		<soundWorking>Recipe_Tailor</soundWorking>-->
 		<recipeUsers>

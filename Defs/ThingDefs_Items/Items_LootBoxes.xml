@@ -44,7 +44,7 @@
 		<drawGUIOverlay>false</drawGUIOverlay>
 		<comps>
 			<li Class="CompProperties_UseEffect">
-				<compClass>LootBoxes.CompUseEffect_LootBox_Treasure</compClass>
+				<compClass>Lanilor.LootBoxes.Things.CompUseEffectLootBoxTreasure</compClass>
 			</li>
 		</comps>
 	</ThingDef>
@@ -65,7 +65,7 @@
 		<drawGUIOverlay>false</drawGUIOverlay>
 		<comps>
 			<li Class="CompProperties_UseEffect">
-				<compClass>LootBoxes.CompUseEffect_LootBox_SilverSmall</compClass>
+				<compClass>Lanilor.LootBoxes.Things.CompUseEffectLootBoxSilverSmall</compClass>
 			</li>
 		</comps>
 	</ThingDef>
@@ -85,7 +85,7 @@
 		<drawGUIOverlay>false</drawGUIOverlay>
 		<comps>
 			<li Class="CompProperties_UseEffect">
-				<compClass>LootBoxes.CompUseEffect_LootBox_SilverLarge</compClass>
+				<compClass>Lanilor.LootBoxes.Things.CompUseEffectLootBoxSilverLarge</compClass>
 			</li>
 		</comps>
 	</ThingDef>
@@ -106,7 +106,7 @@
 		<drawGUIOverlay>false</drawGUIOverlay>
 		<comps>
 			<li Class="CompProperties_UseEffect">
-				<compClass>LootBoxes.CompUseEffect_LootBox_GoldSmall</compClass>
+				<compClass>Lanilor.LootBoxes.Things.CompUseEffectLootBoxGoldSmall</compClass>
 			</li>
 		</comps>
 	</ThingDef>
@@ -126,7 +126,7 @@
 		<drawGUIOverlay>false</drawGUIOverlay>
 		<comps>
 			<li Class="CompProperties_UseEffect">
-				<compClass>LootBoxes.CompUseEffect_LootBox_GoldLarge</compClass>
+				<compClass>Lanilor.LootBoxes.Things.CompUseEffectLootBoxGoldLarge</compClass>
 			</li>
 		</comps>
 	</ThingDef>
@@ -146,7 +146,7 @@
 		<drawGUIOverlay>false</drawGUIOverlay>
 		<comps>
 			<li Class="CompProperties_UseEffect">
-				<compClass>LootBoxes.CompUseEffect_LootBox_Pandora</compClass>
+				<compClass>Lanilor.LootBoxes.Things.CompUseEffectLootBoxPandora</compClass>
 			</li>
 		</comps>
 	</ThingDef>

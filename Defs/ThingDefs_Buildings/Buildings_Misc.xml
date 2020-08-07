@@ -44,8 +44,6 @@
 			<li>ITab_Bills</li>
 		</inspectorTabs>
 		<building>
-			<workSpeedPenaltyOutdoors>false</workSpeedPenaltyOutdoors>
-			<workSpeedPenaltyTemperature>false</workSpeedPenaltyTemperature>
 			<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
 		</building>
 	</ThingDef>
