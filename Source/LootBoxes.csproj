@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -8,10 +8,11 @@
     <ProjectGuid>{0A2E193B-C1AA-40E7-A8D8-C9240F0734AD}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LootBoxes</RootNamespace>
+    <RootNamespace>Lanilor.LootBoxes</RootNamespace>
     <AssemblyName>LootBoxes</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>false</DebugSymbols>
@@ -21,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -29,14 +31,15 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="0Harmony, Version=1.2.0.1, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Assemblies\0Harmony.dll</HintPath>
+    <Reference Include="0Harmony">
+      <HintPath>Libraries\0Harmony.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Assembly-CSharp">
-      <HintPath>..\..\..\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <HintPath>Libraries\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
@@ -46,27 +49,30 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="UnityEngine">
-      <HintPath>..\..\..\RimWorldWin64_Data\Managed\UnityEngine.dll</HintPath>
+      <HintPath>Libraries\UnityEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>Libraries\UnityEngine.CoreModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DefOf\ThingDefOf.cs" />
-    <Compile Include="Gen\GenMagic.cs" />
-    <Compile Include="Harmony\Harmony_ThingSetMaker_MapGen_AncientPodContents.cs" />
-    <Compile Include="Harmony\Harmony_LootBox.cs" />
+    <Compile Include="Utilities.cs" />
+    <Compile Include="Harmony\PatchThingSetMaker_MapGen_AncientPodContentsGiveRandomLootInventoryForTombPawn.cs" />
     <Compile Include="Mod\Mod_LootBoxes.cs" />
     <Compile Include="Mod\ModSettings_LootBoxes.cs" />
-    <Compile Include="Thing\CompUseEffect_LootBox.cs" />
+    <Compile Include="Things\CompUseEffect_LootBox.cs" />
     <Compile Include="DefOf\RecordDefOf.cs" />
-    <Compile Include="Harmony\Harmony.cs" />
+    <Compile Include="Harmony\HarmonyPatchLoad.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Thing\CompUseEffect_LootBox_SilverSmall.cs" />
-    <Compile Include="Thing\CompUseEffect_LootBox_SilverLarge.cs" />
-    <Compile Include="Thing\CompUseEffect_LootBox_GoldSmall.cs" />
-    <Compile Include="Thing\CompUseEffect_LootBox_GoldLarge.cs" />
-    <Compile Include="Thing\CompUseEffect_LootBox_Pandora.cs" />
-    <Compile Include="Thing\CompUseEffect_LootBox_Treasure.cs" />
+    <Compile Include="Things\CompUseEffect_LootBox_SilverSmall.cs" />
+    <Compile Include="Things\CompUseEffect_LootBox_SilverLarge.cs" />
+    <Compile Include="Things\CompUseEffect_LootBox_GoldSmall.cs" />
+    <Compile Include="Things\CompUseEffect_LootBox_GoldLarge.cs" />
+    <Compile Include="Things\CompUseEffect_LootBox_Pandora.cs" />
+    <Compile Include="Things\CompUseEffect_LootBox_Treasure.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

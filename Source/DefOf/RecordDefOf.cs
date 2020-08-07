@@ -1,19 +1,15 @@
 ﻿using RimWorld;
 
-namespace LootBoxes
+namespace Lanilor.LootBoxes.DefOf
 {
-
-    [DefOf]
+    [RimWorld.DefOf]
     public static class RecordDefOf
     {
-
         static RecordDefOf()
-		{
+        {
             DefOfHelper.EnsureInitializedInCtor(typeof(RecordDefOf));
-		}
+        }
 
         public static RecordDef LootBoxesOpened;
-
     }
-
 }

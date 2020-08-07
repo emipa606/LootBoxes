@@ -1,32 +1,29 @@
 ﻿using System.Collections.Generic;
+using JetBrains.Annotations;
 using UnityEngine;
 using Verse;
 
-namespace LootBoxes
+namespace Lanilor.LootBoxes.Mod
 {
-
-    public class ModSettings_LootBoxes : ModSettings
+    [UsedImplicitly]
+    public class ModSettingsLootBoxes : ModSettings
     {
-
         public const float GapHeight = 10f;
 
-        public static List<int> hashArchive = new List<int>();
+        public static List<int> HashArchive = new List<int>();
 
-        private static bool DefaultBonusLootChance = true;
+        private static bool _defaultBonusLootChance = true;
 
-        public static bool bonusLootChance = DefaultBonusLootChance;
-
-        public ModSettings_LootBoxes() : base()
-        {
-        }
+        public static bool BonusLootChance = _defaultBonusLootChance;
 
         public void DoWindowContents(Rect rect)
         {
-            Listing_Standard ls = new Listing_Standard();
+            var ls = new Listing_Standard();
             ls.Begin(rect);
             ls.Gap(GapHeight);
 
-            ls.CheckboxLabeled("LootBoxes_SettingsBonusLootChance".Translate(), ref bonusLootChance, "LootBoxes_SettingsBonusLootChanceDesc".Translate());
+            ls.CheckboxLabeled("LootBoxes_SettingsBonusLootChance".Translate(), ref BonusLootChance,
+                "LootBoxes_SettingsBonusLootChanceDesc".Translate());
             ls.Gap(GapHeight);
 
             ls.End();
@@ -35,10 +32,8 @@ namespace LootBoxes
         public override void ExposeData()
         {
             base.ExposeData();
-            Scribe_Collections.Look(ref hashArchive, "hashArchive", LookMode.Value);
-            Scribe_Values.Look(ref bonusLootChance, "bonusLootChance", DefaultBonusLootChance);
+            Scribe_Collections.Look(ref HashArchive, "hashArchive", LookMode.Value);
+            Scribe_Values.Look(ref BonusLootChance, "bonusLootChance", _defaultBonusLootChance);
         }
-
     }
-
 }

@@ -1,19 +1,19 @@
-﻿using UnityEngine;
+﻿using JetBrains.Annotations;
+using UnityEngine;
 using Verse;
 
-namespace LootBoxes
+namespace Lanilor.LootBoxes.Mod
 {
-
-    public class Mod_LootBoxes : Mod
+    public class ModLootBoxes : Verse.Mod
     {
+        public static ModSettingsLootBoxes Settings;
 
-        public static ModSettings_LootBoxes settings;
-
-        public Mod_LootBoxes(ModContentPack content) : base(content)
+        public ModLootBoxes(ModContentPack content) : base(content)
         {
-            settings = GetSettings<ModSettings_LootBoxes>();
+            Settings = GetSettings<ModSettingsLootBoxes>();
         }
 
+        [NotNull]
         public override string SettingsCategory()
         {
             return "LootBoxes_SettingsCategory".Translate();
@@ -21,10 +21,8 @@ namespace LootBoxes
 
         public override void DoSettingsWindowContents(Rect rect)
         {
-            settings.DoWindowContents(rect);
-            settings.Write();
+            Settings.DoWindowContents(rect);
+            Settings.Write();
         }
-
     }
-
 }
