@@ -21,3 +21,8 @@ todo.txt
 /Source/[Bb]in/
 /Source/[Oo]bj/
 /Source/[Ll]og/
+
+# IDE special folders
+
+/Source/.vs
+/Source/.idea
