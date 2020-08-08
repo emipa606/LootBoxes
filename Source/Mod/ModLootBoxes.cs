@@ -1,4 +1,5 @@
-﻿using JetBrains.Annotations;
+﻿using System.Reflection;
+using JetBrains.Annotations;
 using UnityEngine;
 using Verse;
 
@@ -11,6 +12,8 @@ namespace Lanilor.LootBoxes.Mod
         public ModLootBoxes(ModContentPack content) : base(content)
         {
             Settings = GetSettings<ModSettingsLootBoxes>();
+            var harmony = new HarmonyLib.Harmony("rimworld.lanilor.lootboxes");
+            harmony.PatchAll(Assembly.GetExecutingAssembly());
         }
 
         [NotNull]

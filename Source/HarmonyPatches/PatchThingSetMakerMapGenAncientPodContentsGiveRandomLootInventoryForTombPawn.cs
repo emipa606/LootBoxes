@@ -1,9 +1,9 @@
 ﻿using HarmonyLib;
 using RimWorld;
 using Verse;
-using ThingDefOf = Lanilor.LootBoxes.DefOf.ThingDefOf;
+using ThingDefOf = Lanilor.LootBoxes.DefOfs.ThingDefOf;
 
-namespace Lanilor.LootBoxes.Harmony
+namespace Lanilor.LootBoxes.HarmonyPatches
 {
     [HarmonyPatch(typeof(ThingSetMaker_MapGen_AncientPodContents))]
     [HarmonyPatch("GiveRandomLootInventoryForTombPawn")]

@@ -1,9 +1,9 @@
 ﻿using RimWorld;
 using Verse;
 
-namespace Lanilor.LootBoxes.DefOf
+namespace Lanilor.LootBoxes.DefOfs
 {
-    [RimWorld.DefOf]
+    [DefOf]
     public static class ThingDefOf
     {
         static ThingDefOf()

@@ -58,21 +58,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DefOf\ThingDefOf.cs" />
-    <Compile Include="Utilities.cs" />
-    <Compile Include="Harmony\PatchThingSetMaker_MapGen_AncientPodContentsGiveRandomLootInventoryForTombPawn.cs" />
-    <Compile Include="Mod\Mod_LootBoxes.cs" />
-    <Compile Include="Mod\ModSettings_LootBoxes.cs" />
-    <Compile Include="Things\CompUseEffect_LootBox.cs" />
-    <Compile Include="DefOf\RecordDefOf.cs" />
-    <Compile Include="Harmony\HarmonyPatchLoad.cs" />
+    <Compile Include="DefOfs\ThingDefOf.cs" />
+    <Compile Include="Things\CompUseEffectLootBox.cs" />
+    <Compile Include="Things\Reward.cs" />
+    <Compile Include="HarmonyPatches\PatchThingSetMakerMapGenAncientPodContentsGiveRandomLootInventoryForTombPawn.cs" />
+    <Compile Include="Mod\ModLootBoxes.cs" />
+    <Compile Include="Mod\ModSettingsLootBoxes.cs" />
+    <Compile Include="Things\LootboxReward.cs" />
+    <Compile Include="DefOfs\RecordDefOf.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Things\CompUseEffect_LootBox_SilverSmall.cs" />
-    <Compile Include="Things\CompUseEffect_LootBox_SilverLarge.cs" />
-    <Compile Include="Things\CompUseEffect_LootBox_GoldSmall.cs" />
-    <Compile Include="Things\CompUseEffect_LootBox_GoldLarge.cs" />
-    <Compile Include="Things\CompUseEffect_LootBox_Pandora.cs" />
-    <Compile Include="Things\CompUseEffect_LootBox_Treasure.cs" />
+    <Compile Include="Things\CompUseEffectLootBoxSilverSmall.cs" />
+    <Compile Include="Things\CompUseEffectLootBoxSilverLarge.cs" />
+    <Compile Include="Things\CompUseEffectLootBoxGoldSmall.cs" />
+    <Compile Include="Things\CompUseEffectLootBoxGoldLarge.cs" />
+    <Compile Include="Things\CompUseEffectLootBoxPandora.cs" />
+    <Compile Include="Things\CompUseEffectLootBoxTreasure.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

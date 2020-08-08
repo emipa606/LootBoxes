@@ -1,8 +1,0 @@
-﻿namespace Lanilor.LootBoxes.Things
-{
-    public class CompUseEffectLootBoxSilverSmall : CompUseEffectLootBox
-    {
-        protected override string LootTable =>
-            "2|3|8;MealSurvivalPack,1,2,5|11;MealNutrientPaste,2,3,10|11;MealSimple,2,3,10|9;MealFine,1,2,10|7;MealLavish,1,2,5|11;Kibble,5,10,40|7;Chocolate,2,5,15|5;InsectJelly,5,10,40|4;MealSimple,1,2,5;MealFine,1,2,5;MealLavish,1,1,4|9;Beer,2,5,10|9;SmokeleafJoint,2,5,10|1;GoJuice,1,2,5|3;Penoxycyline,1,2,5|4;Yayo,1,2,5|3;WakeUp,1,2,5|1;SmokeleafJoint,1,2,5;Yayo,1,2,4;WakeUp,1,2,4|1;SimpleProstheticLeg|1;SimpleProstheticArm|1;SimpleProstheticHeart|1;CochlearImplant|6;MedicineIndustrial,1,2,4|7;ComponentIndustrial,1,2,4|2;Neutroamine,2,5,15|6;Chemfuel,5,10,50|5;Shell_HighExplosive,1,1,4|5;Shell_Incendiary,1,1,4|4;Shell_EMP,1,1,2|4;Shell_Firefoam,1,1,2|3;ElephantTusk,1,1,2|1;MeleeWeapon_Mace|1;MeleeWeapon_LongSword|1;MeleeWeapon_Spear|2;Gun_Revolver,1,1,2|2;Gun_Autopistol,1,1,2|1;Gun_MachinePistol|1;Gun_IncendiaryLauncher|1;Gun_BoltActionRifle|1;Gun_PumpShotgun|1;Apparel_SmokepopBelt|3;Apparel_CowboyHat,1,1,3|3;Apparel_BowlerHat,1,1,3|3;Apparel_Tuque,1,1,3|3;Apparel_Parka|3;Apparel_Pants,1,1,2|3;Apparel_BasicShirt,1,1,2|3;Apparel_CollarShirt,1,1,2|3;Apparel_Duster|7;Silver,20,30,50|4;Gold,1,2,10|11;Steel,10,20,50|5;Plasteel,1,2,10|11;WoodLog,10,20,75|6;Jade,2,5,10|7;Steel,10,20,40;WoodLog,10,20,40|8;Cloth,10,20,50|4;Synthread,5,10,75|1;DevilstrandCloth,10,20,50|3;Leather_Panthera,10,20,50|3;Leather_Camel,10,20,50|3;Leather_Bluefur,10,20,50|3;Leather_Bear,10,20,50|2;Leather_Elephant,10,20,50|2;LootBoxTreasure|2;LootBoxSilverSmall|1;LootBoxSilverLarge|1;LootBoxPandora";
-    }
-}

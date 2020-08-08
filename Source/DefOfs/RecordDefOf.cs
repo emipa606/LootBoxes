@@ -1,8 +1,8 @@
 ﻿using RimWorld;
 
-namespace Lanilor.LootBoxes.DefOf
+namespace Lanilor.LootBoxes.DefOfs
 {
-    [RimWorld.DefOf]
+    [DefOf]
     public static class RecordDefOf
     {
         static RecordDefOf()
