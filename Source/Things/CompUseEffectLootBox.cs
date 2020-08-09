@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using JetBrains.Annotations;
+using Lanilor.LootBoxes.Mod;
 using RimWorld;
 using Verse;
 using Verse.Sound;
@@ -39,7 +40,20 @@ namespace Lanilor.LootBoxes.Things
         private IEnumerable<Thing> CreateLoot()
         {
             var lootList = new List<Thing>();
-            var spawnCount = Rand.RangeInclusive(SetMinimum, SetMaximum);
+            // RNG Here will be biased towards the SetMinimum, so it'll be more likely to get closer to SetMinimum than getting to SetMaximum.
+            var spawnCount = Rand.RangeInclusive(SetMinimum, Rand.RangeInclusive(SetMinimum, SetMaximum));
+
+            /*
+             * Bonus Loot chance by default was multiplied by 2 the reward count, but it also would reduce
+             * the chances by a factor of 2 if a bonus was already applied to the exact same box with the same
+             * hash ID (so if you were to reload the world without saving, the same box would be there and chances
+             * would be reduced instead of increased). This code just says screw that and always increases it as 
+             * long as the config option is enabled.
+             */
+            if (ModLootBoxes.Settings.UseBonusLootChance)
+                spawnCount = GenMath.RoundRandom(spawnCount * ModLootBoxes.Settings.BonusLootChance);
+
+            spawnCount = Math.Max(1, spawnCount);
 
             while (spawnCount > 0)
             {
