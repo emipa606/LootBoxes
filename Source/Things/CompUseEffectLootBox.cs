@@ -39,40 +39,45 @@ namespace Lanilor.LootBoxes.Things
         private IEnumerable<Thing> CreateLoot()
         {
             var lootList = new List<Thing>();
+            var spawnCount = Rand.RangeInclusive(SetMinimum, SetMaximum);
 
-            var chosenReward = RewardTable.RandomElementByWeight(k => k.Weight * k.Weight);
-            var groupedReward = chosenReward.Rewards.GroupBy(k => DefDatabase<ThingDef>.GetNamed(k.ItemDefName))
-                .Where(k => k.Key != null).ToList();
-
-            foreach (var group in groupedReward)
+            while (spawnCount > 0)
             {
-                var targetDef = group.Key;
-                foreach (var reward in group)
+                spawnCount--;
+                var chosenReward = RewardTable.RandomElementByWeight(k => k.Weight * k.Weight);
+                var groupedReward = chosenReward.Rewards.GroupBy(k => DefDatabase<ThingDef>.GetNamed(k.ItemDefName))
+                    .Where(k => k.Key != null).ToList();
+
+                foreach (var group in groupedReward)
                 {
-                    var min = Math.Max(reward.MinimumDropCount, 1);
-                    var max = Math.Max(reward.MaximumDropCount, min);
-                    if (reward.RandomizeDropCountUpTo > max)
-                        max = Rand.RangeInclusive(max, reward.RandomizeDropCountUpTo);
-
-                    var countToDo = Rand.RangeInclusive(min, max);
-                    while (countToDo > 0)
+                    var targetDef = group.Key;
+                    foreach (var reward in group)
                     {
-                        var count = Math.Min(countToDo, targetDef.stackLimit);
-                        countToDo -= count;
+                        var min = Math.Max(reward.MinimumDropCount, 1);
+                        var max = Math.Max(reward.MaximumDropCount, min);
+                        if (reward.RandomizeDropCountUpTo > max)
+                            max = Rand.RangeInclusive(max, reward.RandomizeDropCountUpTo);
 
-                        var thing = ThingMaker.MakeThing(targetDef, GenStuff.RandomStuffFor(targetDef));
-                        thing.stackCount = count;
-
-                        var compQuality = thing.TryGetComp<CompQuality>();
-                        if (compQuality != null)
+                        var countToDo = Rand.RangeInclusive(min, max);
+                        while (countToDo > 0)
                         {
-                            var q = QualityUtility.GenerateQualityCreatedByPawn(Rand.RangeInclusive(0, 19), false);
-                            compQuality.SetQuality(q, ArtGenerationContext.Outsider);
-                        }
+                            var count = Math.Min(countToDo, targetDef.stackLimit);
+                            countToDo -= count;
 
-                        var compArt = thing.TryGetComp<CompArt>();
-                        compArt?.InitializeArt(ArtGenerationContext.Outsider);
-                        lootList.Add(thing);
+                            var thing = ThingMaker.MakeThing(targetDef, GenStuff.RandomStuffFor(targetDef));
+                            thing.stackCount = count;
+
+                            var compQuality = thing.TryGetComp<CompQuality>();
+                            if (compQuality != null)
+                            {
+                                var q = QualityUtility.GenerateQualityCreatedByPawn(Rand.RangeInclusive(0, 19), false);
+                                compQuality.SetQuality(q, ArtGenerationContext.Outsider);
+                            }
+
+                            var compArt = thing.TryGetComp<CompArt>();
+                            compArt?.InitializeArt(ArtGenerationContext.Outsider);
+                            lootList.Add(thing);
+                        }
                     }
                 }
             }
