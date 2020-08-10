@@ -4,9 +4,9 @@
 	<author>Lanilor, Pustalorc</author>
 	<url>https://github.com/Lanilor/Rimworld-Loot-Boxes</url>
   	<packageId>lanilor.lootboxes</packageId>
-	<targetVersion>1.1.2654</targetVersion>
 	<supportedVersions>
 		<li>1.1</li>
+		<li>1.2</li>
 	</supportedVersions>
 	<modDependencies>
 		<li>

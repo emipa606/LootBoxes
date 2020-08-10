@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingSetMakerDef[defName="Reward_ItemsStandard"]/root/options</xpath>
+		<value>
+			<li>
+				<maxMarketValue>5500</maxMarketValue>
+				<thingSetMaker Class="ThingSetMaker_RandomOption">
+					<options>
+						<li>
+							<weight>2</weight>
+							<thingSetMaker Class="ThingSetMaker_MarketValue">
+								<fixedParams>
+									<filter>
+										<categories>
+											<li>LootBoxes</li>
+										</categories>
+										<thingSetMakerTagsToDisallow>
+											<li>RewardSpecial</li>
+											<li>AnimalPart</li>
+										</thingSetMakerTagsToDisallow>
+									</filter>
+								</fixedParams>
+							</thingSetMaker>
+						</li>
+						<li>
+							<weight>5</weight>
+							<thingSetMaker Class="ThingSetMaker_MarketValue">
+								<fixedParams>
+									<filter>
+										<categories>
+											<li>LootBoxes</li>
+										</categories>
+										<disallowedThingDefs>
+											<li>LootBoxSilverSmall</li>
+										</disallowedThingDefs>
+										<thingSetMakerTagsToDisallow>
+											<li>RewardSpecial</li>
+											<li>AnimalPart</li>
+										</thingSetMakerTagsToDisallow>
+									</filter>
+								</fixedParams>
+							</thingSetMaker>
+						</li>
+					</options>
+				</thingSetMaker>
+			</li>
+		</value>
+	</Operation>
+	
+</Patch>
