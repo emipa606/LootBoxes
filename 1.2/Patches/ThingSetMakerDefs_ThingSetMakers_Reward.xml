@@ -5,11 +5,11 @@
 		<xpath>/Defs/ThingSetMakerDef[defName="Reward_ItemsStandard"]/root/options</xpath>
 		<value>
 			<li>
-				<maxMarketValue>5500</maxMarketValue>
+				<maxMarketValue>1000</maxMarketValue>
 				<thingSetMaker Class="ThingSetMaker_RandomOption">
 					<options>
 						<li>
-							<weight>2</weight>
+							<weight>1</weight>
 							<thingSetMaker Class="ThingSetMaker_MarketValue">
 								<fixedParams>
 									<filter>
@@ -25,7 +25,7 @@
 							</thingSetMaker>
 						</li>
 						<li>
-							<weight>5</weight>
+							<weight>3</weight>
 							<thingSetMaker Class="ThingSetMaker_MarketValue">
 								<fixedParams>
 									<filter>
