@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <Manifest>
 	<identifier>LootBoxes</identifier>
-	<version>1.1.0</version>
+	<version>1.2.0</version>
 	<manifestUri>https://raw.githubusercontent.com/Lanilor/Rimworld-Loot-Boxes/master/About/Manifest.xml</manifestUri>
 	<downloadUri>https://github.com/Lanilor/Rimworld-Loot-Boxes/releases/latest</downloadUri>
 </Manifest>

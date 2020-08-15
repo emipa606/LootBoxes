@@ -1,7 +1,12 @@
-﻿using HarmonyLib;
+﻿using Lanilor.LootBoxes.DefOfs;
 using RimWorld;
 using Verse;
-using ThingDefOf = Lanilor.LootBoxes.DefOfs.ThingDefOf;
+#if V10
+using Harmony;
+
+#else
+using HarmonyLib;
+#endif
 
 namespace Lanilor.LootBoxes.HarmonyPatches
 {
@@ -15,12 +20,13 @@ namespace Lanilor.LootBoxes.HarmonyPatches
             ThingDef lootToAdd = null;
             var random = Rand.Value;
             if (random < 0.10f)
-                lootToAdd = ThingDefOf.LootBoxTreasure;
+                lootToAdd = LootboxDefOf.LootBoxTreasure;
             else if (random < 0.35f)
-                lootToAdd = ThingDefOf.LootBoxSilverSmall;
+                lootToAdd = LootboxDefOf.LootBoxSilverSmall;
             else if (random < 0.40f)
-                lootToAdd = ThingDefOf.LootBoxGoldSmall;
-            else if (random < 0.50f) lootToAdd = ThingDefOf.LootBoxPandora;
+                lootToAdd = LootboxDefOf.LootBoxGoldSmall;
+            else if (random < 0.50f)
+                lootToAdd = LootboxDefOf.LootBoxPandora;
 
             // Create and add loot if needed
             if (lootToAdd == null) return;

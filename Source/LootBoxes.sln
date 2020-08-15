@@ -7,14 +7,17 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LootBoxes", "LootBoxes.cspr
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
+		V10|Any CPU = V10|Any CPU
+		V11|Any CPU = V11|Any CPU
+		V12|Any CPU = V12|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0A2E193B-C1AA-40E7-A8D8-C9240F0734AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0A2E193B-C1AA-40E7-A8D8-C9240F0734AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0A2E193B-C1AA-40E7-A8D8-C9240F0734AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0A2E193B-C1AA-40E7-A8D8-C9240F0734AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A2E193B-C1AA-40E7-A8D8-C9240F0734AD}.V10|Any CPU.ActiveCfg = V10|Any CPU
+		{0A2E193B-C1AA-40E7-A8D8-C9240F0734AD}.V10|Any CPU.Build.0 = V10|Any CPU
+		{0A2E193B-C1AA-40E7-A8D8-C9240F0734AD}.V11|Any CPU.ActiveCfg = V11|Any CPU
+		{0A2E193B-C1AA-40E7-A8D8-C9240F0734AD}.V11|Any CPU.Build.0 = V11|Any CPU
+		{0A2E193B-C1AA-40E7-A8D8-C9240F0734AD}.V12|Any CPU.ActiveCfg = V12|Any CPU
+		{0A2E193B-C1AA-40E7-A8D8-C9240F0734AD}.V12|Any CPU.Build.0 = V12|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

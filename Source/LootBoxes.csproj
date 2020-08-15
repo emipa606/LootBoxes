@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Configuration Condition=" '$(Configuration)' == '' ">V12</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
@@ -10,62 +10,97 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Lanilor.LootBoxes</RootNamespace>
     <AssemblyName>LootBoxes</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion Condition=" '$(Configuration)'=='V12' ">v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion Condition=" '$(Configuration)'=='V11' ">v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion Condition=" '$(Configuration)'=='V10' ">v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>false</DebugSymbols>
-    <DebugType>none</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>..\Assemblies\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'V12|AnyCPU' ">
     <DebugType>none</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\Assemblies\</OutputPath>
+    <OutputPath>..\1.2\Assemblies\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'V11|AnyCPU' ">
+    <OutputPath>..\1.1\Assemblies\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'V10|AnyCPU' ">
+    <OutputPath>..\1.0\Assemblies\</OutputPath>
+    <DefineConstants>V10</DefineConstants>
+    <Optimize>true</Optimize>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
   <ItemGroup>
-    <Reference Include="0Harmony">
-      <HintPath>Libraries\0Harmony.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Assembly-CSharp">
-      <HintPath>Libraries\Assembly-CSharp.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="UnityEngine">
-      <HintPath>Libraries\UnityEngine.dll</HintPath>
+    <Reference Include="0Harmony" Condition="'$(Configuration)'=='V12'">
+      <HintPath>Libraries\1.2\0Harmony.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="UnityEngine.CoreModule">
-      <HintPath>Libraries\UnityEngine.CoreModule.dll</HintPath>
+    <Reference Include="Assembly-CSharp" Condition="'$(Configuration)'=='V12'">
+      <HintPath>Libraries\1.2\Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine" Condition="'$(Configuration)'=='V12'">
+      <HintPath>Libraries\1.2\UnityEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule" Condition="'$(Configuration)'=='V12'">
+      <HintPath>Libraries\1.2\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="0Harmony" Condition="'$(Configuration)'=='V11'">
+      <HintPath>Libraries\1.1\0Harmony.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp" Condition="'$(Configuration)'=='V11'">
+      <HintPath>Libraries\1.1\Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine" Condition="'$(Configuration)'=='V11'">
+      <HintPath>Libraries\1.1\UnityEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule" Condition="'$(Configuration)'=='V11'">
+      <HintPath>Libraries\1.1\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="0Harmony" Condition="'$(Configuration)'=='V10'">
+      <HintPath>Libraries\1.0\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp" Condition="'$(Configuration)'=='V10'">
+      <HintPath>Libraries\1.0\Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine" Condition="'$(Configuration)'=='V10'">
+      <HintPath>Libraries\1.0\UnityEngine.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DefOfs\ThingDefOf.cs" />
+    <Compile Include="DefOfs\LootboxDefOf.cs" />
     <Compile Include="Things\CompUseEffectLootBox.cs" />
-    <Compile Include="Things\Reward.cs" />
     <Compile Include="HarmonyPatches\PatchThingSetMakerMapGenAncientPodContentsGiveRandomLootInventoryForTombPawn.cs" />
     <Compile Include="Mod\ModLootBoxes.cs" />
     <Compile Include="Mod\ModSettingsLootBoxes.cs" />
-    <Compile Include="Things\LootboxReward.cs" />
-    <Compile Include="DefOfs\RecordDefOf.cs" />
+    <Compile Include="DefOfs\LootboxRecordDefOf.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Things\CompUseEffectLootBoxSilverSmall.cs" />
     <Compile Include="Things\CompUseEffectLootBoxSilverLarge.cs" />
@@ -73,6 +108,7 @@
     <Compile Include="Things\CompUseEffectLootBoxGoldLarge.cs" />
     <Compile Include="Things\CompUseEffectLootBoxPandora.cs" />
     <Compile Include="Things\CompUseEffectLootBoxTreasure.cs" />
+    <Compile Include="Things\LootBoxType.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

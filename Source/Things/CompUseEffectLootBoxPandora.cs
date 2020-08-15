@@ -40,7 +40,7 @@ namespace Lanilor.LootBoxes.Things
                 } // Bad and neutral
             };
 
-        protected override void OpenBox([NotNull] Pawn usedBy)
+        protected override void OpenBox(Pawn usedBy)
         {
             var map = usedBy.Map;
             Rand.PushState(parent.HashOffset());
@@ -64,33 +64,37 @@ namespace Lanilor.LootBoxes.Things
                     validIncidents.RandomElementByWeight(IncidentChanceFinal);
                 if (selectedIncident == null) continue;
 
-                var parms = StorytellerUtility.DefaultParmsNow(selectedIncident.category, map);
+                var storyTellerParams = StorytellerUtility.DefaultParmsNow(selectedIncident.category, map);
                 if (selectedIncident.pointsScaleable)
                 {
                     var storytellerComp = Find.Storyteller.storytellerComps.First(x =>
                         x is StorytellerComp_OnOffCycle || x is StorytellerComp_RandomMain);
                     if (storytellerComp != null)
-                        parms = storytellerComp.GenerateParms(selectedIncident.category, parms.target);
+                        storyTellerParams = storytellerComp.GenerateParms(selectedIncident.category, storyTellerParams.target);
                 }
 
-                selectedIncident.Worker.TryExecute(parms);
+                selectedIncident.Worker.TryExecute(storyTellerParams);
             }
 
             Rand.PopState();
         }
 
-        private float IncidentChanceFinal([NotNull] IncidentDef def)
+        private static float IncidentChanceFinal([NotNull] IncidentDef def)
         {
+#if V10
+            var chance = def.Worker.AdjustedChance;
+#else
             var chance = def.Worker.BaseChanceThisGame;
+#endif
             chance *= IncidentChanceFactor_CurrentPopulation(def);
             return Math.Max(0f, chance);
         }
 
-        private float IncidentChanceFactor_CurrentPopulation([NotNull] IncidentDef def)
+        private static float IncidentChanceFactor_CurrentPopulation([NotNull] IncidentDef def)
         {
             if (def.chanceFactorByPopulationCurve == null) return 1f;
 
-            var pawnCount = PawnsFinder.AllMapsCaravansAndTravelingTransportPods_Alive_Colonists.Count;
+            var pawnCount = PawnsFinder.AllMapsCaravansAndTravelingTransportPods_Alive_Colonists.Count();
             return def.chanceFactorByPopulationCurve.Evaluate(pawnCount);
         }
 
