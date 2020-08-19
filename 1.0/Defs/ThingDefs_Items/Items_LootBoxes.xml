@@ -30,7 +30,6 @@
 	<ThingDef ParentName="LootBoxBase">
 		<defName>LootBoxTreasure</defName>
 		<label>treasure chest</label>
-		<thingSetMakerTags><li>RewardStandardHighFreq</li></thingSetMakerTags>
 		<description>A golden treasure chest. Fort knox in a box! Become the richest colony in the galaxy with a little bit of luck!</description>
 		<graphicData>
 			<texPath>Things/Item/LootBox/TreasureBox</texPath>
@@ -52,7 +51,6 @@
 	<ThingDef ParentName="LootBoxBase">
 		<defName>LootBoxSilverSmall</defName>
 		<label>small common chest</label>
-		<thingSetMakerTags><li>RewardStandardHighFreq</li></thingSetMakerTags>
 		<description>A small common loot box. Open it and get a change to receive powerful and valuable items!</description>
 		<graphicData>
 			<texPath>Things/Item/LootBox/SilverSmall</texPath>
@@ -74,7 +72,6 @@
 	<ThingDef ParentName="LootBoxBase">
 		<defName>LootBoxSilverLarge</defName>
 		<label>large common chest</label>
-		<thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
 		<description>A large common loot box. The true test of luck! Open it and you may get something awesome or many useful items. Or both!</description>
 		<graphicData>
 			<texPath>Things/Item/LootBox/SilverLarge</texPath>
@@ -95,7 +92,6 @@
 	<ThingDef ParentName="LootBoxBase">
 		<defName>LootBoxGoldSmall</defName>
 		<label>small golden chest</label>
-		<thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
 		<description>A small golden loot box. There may be some really nice stuff in here! Get a change to receive some of the best items on the rim!</description>
 		<graphicData>
 			<texPath>Things/Item/LootBox/GoldSmall</texPath>
@@ -117,7 +113,6 @@
 	<ThingDef ParentName="LootBoxBase">
 		<defName>LootBoxGoldLarge</defName>
 		<label>large golden chest</label>
-		<thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
 		<description>A large golden loot box. Fulfill all your dreams with this extraordinary loot crate! The highest chance to get the best and most expensive items!</description>
 		<graphicData>
 			<texPath>Things/Item/LootBox/GoldLarge</texPath>
@@ -138,7 +133,6 @@
 	<ThingDef ParentName="LootBoxBase">
 		<defName>LootBoxPandora</defName>
 		<label>pandoras box</label>
-		<thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
 		<description>Pandoras box. What may be in here?</description>
 		<graphicData>
 			<texPath>Things/Item/LootBox/PandorasBox</texPath>

@@ -4,6 +4,7 @@ namespace Lanilor.LootBoxes.Mod
 {
     public class ModSettingsLootBoxes : ModSettings
     {
+        public bool UseIngameRewardsGenerator = true;
         public bool UseBonusLootChance = true;
 
         public float BonusLootChance = 1.5f;
@@ -59,8 +60,9 @@ namespace Lanilor.LootBoxes.Mod
         public override void ExposeData()
         {
             base.ExposeData();
-            Scribe_Values.Look(ref BonusLootChance, "BonusLootChance", 1.5f, true);
+            Scribe_Values.Look(ref UseIngameRewardsGenerator, "UseIngameRewardsGenerator", true, true);
             Scribe_Values.Look(ref UseBonusLootChance, "UseBonusLootChance", true, true);
+            Scribe_Values.Look(ref BonusLootChance, "BonusLootChance", 1.5f, true);
             Scribe_Values.Look(ref ChanceForTreasure, "RewardTreasureLootboxChance", 0.25f, true);
             Scribe_Values.Look(ref ChanceForSilverS, "RewardCommonSmallLootboxChance", 0.20f, true);
             Scribe_Values.Look(ref ChanceForSilverL, "RewardCommonLargeLootboxChance", 0.15f, true);
@@ -69,11 +71,13 @@ namespace Lanilor.LootBoxes.Mod
             Scribe_Values.Look(ref ChanceForPandora, "RewardPandoraLootboxChance", 0.01f, true);
             Scribe_Values.Look(ref SetMinTreasure, "TreasureBoxMinimumDropCount", 1, true);
             Scribe_Values.Look(ref SetMaxTreasure, "TreasureBoxMaximumDropCount", 3, true);
-            Scribe_Values.Look(ref TreasureLootboxChanceMultiplier, "TreasureBoxRewardLootboxChanceMultiplier", 0.25f, true);
+            Scribe_Values.Look(ref TreasureLootboxChanceMultiplier, "TreasureBoxRewardLootboxChanceMultiplier", 0.25f,
+                true);
             Scribe_Values.Look(ref TreasureRewardValue, "TreasureBoxRewardItemsValue", 150, true);
             Scribe_Values.Look(ref SetMinSilverS, "CommonSmallBoxMinimumDropCount", 2, true);
             Scribe_Values.Look(ref SetMaxSilverS, "CommonSmallBoxMaximumDropCount", 3, true);
-            Scribe_Values.Look(ref SilverSLootboxChanceMultiplier, "CommonSmallBoxRewardLootboxChanceMultiplier", 0.5f, true);
+            Scribe_Values.Look(ref SilverSLootboxChanceMultiplier, "CommonSmallBoxRewardLootboxChanceMultiplier", 0.5f,
+                true);
             Scribe_Values.Look(ref SilverSRewardValue, "CommonSmallBoxRewardItemsValue", 300, true);
             Scribe_Values.Look(ref SetMinSilverL, "CommonLargeBoxMinimumDropCount", 1, true);
             Scribe_Values.Look(ref SetMaxSilverL, "CommonLargeBoxMaximumDropCount", 12, true);
@@ -86,7 +90,8 @@ namespace Lanilor.LootBoxes.Mod
             Scribe_Values.Look(ref GoldSRewardValue, "GoldSmallBoxRewardItemsValue", 550, true);
             Scribe_Values.Look(ref SetMinGoldL, "GoldLargeBoxMinimumDropCount", 3, true);
             Scribe_Values.Look(ref SetMaxGoldL, "GoldLargeBoxMaximumDropCount", 9, true);
-            Scribe_Values.Look(ref GoldLLootboxChanceMultiplier, "GoldLargeBoxRewardLootboxChanceMultiplier", 1.25f, true);
+            Scribe_Values.Look(ref GoldLLootboxChanceMultiplier, "GoldLargeBoxRewardLootboxChanceMultiplier", 1.25f,
+                true);
             Scribe_Values.Look(ref GoldLRewardValue, "GoldLargeBoxRewardItemsValue", 1000, true);
         }
     }

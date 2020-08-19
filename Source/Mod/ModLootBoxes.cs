@@ -49,6 +49,10 @@ namespace Lanilor.LootBoxes.Mod
             ls.BeginScrollView(new Rect(rect.x, rect.y, rect.width, rect.height), ref m_Scroll, ref m_ViewRect);
             ls.Gap();
 
+            ls.CheckboxLabeled("LootBoxes_SettingsUseIngameRewardsGenerator".Translate(),
+                ref Settings.UseIngameRewardsGenerator, "LootBoxes_SettingsUseIngameRewardsGeneratorDesc".Translate());
+            ls.Gap();
+
             ls.CheckboxLabeled("LootBoxes_SettingsUseBonusLootChance".Translate(), ref Settings.UseBonusLootChance,
                 "LootBoxes_SettingsUseBonusLootChanceDesc".Translate());
             ls.Gap();

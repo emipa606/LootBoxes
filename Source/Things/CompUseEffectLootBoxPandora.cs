@@ -70,7 +70,8 @@ namespace Lanilor.LootBoxes.Things
                     var storytellerComp = Find.Storyteller.storytellerComps.First(x =>
                         x is StorytellerComp_OnOffCycle || x is StorytellerComp_RandomMain);
                     if (storytellerComp != null)
-                        storyTellerParams = storytellerComp.GenerateParms(selectedIncident.category, storyTellerParams.target);
+                        storyTellerParams =
+                            storytellerComp.GenerateParms(selectedIncident.category, storyTellerParams.target);
                 }
 
                 selectedIncident.Worker.TryExecute(storyTellerParams);

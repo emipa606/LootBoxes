@@ -4,6 +4,9 @@
   <!-- Settings -->
 	<LootBoxes_SettingsCategory>Loot Boxes</LootBoxes_SettingsCategory>
 	
+	<LootBoxes_SettingsUseIngameRewardsGenerator>Use ingame rewards generator</LootBoxes_SettingsUseIngameRewardsGenerator>
+	<LootBoxes_SettingsUseIngameRewardsGeneratorDesc>If true, the ingame rewards generator will be used, otherwise the builtin rewards table will be used. Note that if this is false, most of the settings here except for the minimum and maximum spawns will not be taken into account.</LootBoxes_SettingsUseIngameRewardsGeneratorDesc>
+	
 	<LootBoxes_SettingsUseBonusLootChance>Enables the multiplier for extra loot.</LootBoxes_SettingsUseBonusLootChance>
 	<LootBoxes_SettingsUseBonusLootChanceDesc>When enabled, loot boxes will generate bonus loot based on the multiplier.</LootBoxes_SettingsUseBonusLootChanceDesc>
 	<LootBoxes_SettingsBonusLootChance>Loot Multiplier: </LootBoxes_SettingsBonusLootChance>

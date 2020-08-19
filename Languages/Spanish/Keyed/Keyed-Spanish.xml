@@ -4,6 +4,9 @@
   <!-- Settings -->
 	<LootBoxes_SettingsCategory>Cajas de ganancias</LootBoxes_SettingsCategory>
 	
+	<LootBoxes_SettingsUseIngameRewardsGenerator>Utilizar el generador de premios del juego</LootBoxes_SettingsUseIngameRewardsGenerator>
+	<LootBoxes_SettingsUseIngameRewardsGeneratorDesc>Si se activa, el generador de premios del juego sera utilizado, si no, las tablas de premios seran utilizadas. Es importante saber que si esta opcion esta en falso, la mayoria de las opciones de aqui no seran utilizadas, solo las de cantidad minima y maxima.</LootBoxes_SettingsUseIngameRewardsGeneratorDesc>
+	
 	<LootBoxes_SettingsUseBonusLootChance>Activa el multiplicador para ganancias extras.</LootBoxes_SettingsUseBonusLootChance>
 	<LootBoxes_SettingsUseBonusLootChanceDesc>Cuando se activa, las cajas crearan mas ganancias basado en el multiplicador.</LootBoxes_SettingsUseBonusLootChanceDesc>
 	<LootBoxes_SettingsBonusLootChance>Multiplicador de ganancias: </LootBoxes_SettingsBonusLootChance>

@@ -20,7 +20,7 @@
     <DebugType>none</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>..\1.2\Assemblies\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
+    <DefineConstants>V12</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
@@ -108,7 +108,9 @@
     <Compile Include="Things\CompUseEffectLootBoxGoldLarge.cs" />
     <Compile Include="Things\CompUseEffectLootBoxPandora.cs" />
     <Compile Include="Things\CompUseEffectLootBoxTreasure.cs" />
+    <Compile Include="Things\LootboxReward.cs" />
     <Compile Include="Things\LootBoxType.cs" />
+    <Compile Include="Things\Reward.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
