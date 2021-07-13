@@ -51,18 +51,17 @@ namespace Lanilor.LootBoxes.Things
                 makerParams.techLevel = usedBy.Faction.def.techLevel;
                 makerParams.totalMarketValueRange = new FloatRange(0.7f, 1.3f) * MaximumMarketRewardValue;
 #else
-                var generatorParams = default(RewardsGeneratorParams);
-
-                generatorParams.rewardValue =
- MaximumMarketRewardValue * Find.Storyteller.difficulty.questRewardValueFactor;
-                generatorParams.minGeneratedRewardValue = 250f;
-                generatorParams.giverFaction = usedBy.Faction;
-                generatorParams.populationIntent =
- QuestTuning.PopIncreasingRewardWeightByPopIntentCurve.Evaluate(StorytellerUtilityPopulation.PopulationIntentForQuest);
-                generatorParams.allowGoodwill = false;
-                generatorParams.allowRoyalFavor = false;
-                generatorParams.giveToCaravan = false;
-                generatorParams.thingRewardItemsOnly = true;
+                var generatorParams = new RewardsGeneratorParams
+                {
+                    rewardValue = MaximumMarketRewardValue * Find.Storyteller.difficulty.questRewardValueFactor,
+                    minGeneratedRewardValue = 250f,
+                    //giverFaction = usedBy.Faction,
+                    populationIntent = QuestTuning.PopIncreasingRewardWeightByPopIntentCurve.Evaluate(StorytellerUtilityPopulation.PopulationIntentForQuest),
+                    allowGoodwill = false,
+                    allowRoyalFavor = false,
+                    giveToCaravan = false,
+                    thingRewardItemsOnly = true,
+                };
 #endif
 
                 var used = 0;

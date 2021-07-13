@@ -7,7 +7,6 @@ using UnityEngine;
 using Verse;
 #if V10
 using Harmony;
-
 #else
 using HarmonyLib;
 #endif
@@ -37,16 +36,24 @@ namespace Lanilor.LootBoxes.Mod
         }
 
         private LootBoxType m_Selected = LootBoxType.Treasure;
-        private Vector2 m_Scroll = Vector2.zero;
-        private Rect m_ViewRect;
 
-        public override void DoSettingsWindowContents(Rect rect)
+        private Vector2 m_Scroll = Vector2.zero;
+
+        public override void DoSettingsWindowContents(Rect inRect)
         {
+            inRect.yMin += 15f;
+            inRect.yMax -= 15f;
+
+            float columnWidth = inRect.width - 50f;
             var ls = new Listing_Standard
             {
-                ColumnWidth = rect.width - 20f
+                ColumnWidth = columnWidth
             };
-            ls.BeginScrollView(new Rect(rect.x, rect.y, rect.width, rect.height), ref m_Scroll, ref m_ViewRect);
+
+            var r = new Rect(0f, 0f, inRect.width - 16f, inRect.height * 1.75f);
+            Widgets.BeginScrollView(inRect, ref m_Scroll, r);
+            ls.Begin(r);
+
             ls.Gap();
 
             ls.CheckboxLabeled("LootBoxes_SettingsUseIngameRewardsGenerator".Translate(),
@@ -221,7 +228,8 @@ namespace Lanilor.LootBoxes.Mod
                     break;
             }
 
-            ls.EndScrollView(ref m_ViewRect);
+            ls.End();
+            Widgets.EndScrollView();
 
             Settings.Write();
         }
