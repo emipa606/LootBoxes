@@ -6,6 +6,9 @@ namespace Lanilor.LootBoxes.Mod
     {
         public bool UseIngameRewardsGenerator = true;
         public bool UseBonusLootChance = true;
+#if V13 || V12 || V11
+        public bool AllowPsychicAmplifierSpawn = true;
+#endif
 
         public float BonusLootChance = 1.5f;
 
@@ -62,6 +65,9 @@ namespace Lanilor.LootBoxes.Mod
             base.ExposeData();
             Scribe_Values.Look(ref UseIngameRewardsGenerator, "UseIngameRewardsGenerator", true, true);
             Scribe_Values.Look(ref UseBonusLootChance, "UseBonusLootChance", true, true);
+#if V13 || V12 || V11
+            Scribe_Values.Look(ref AllowPsychicAmplifierSpawn, "AllowPsychicAmplifierSpawn", true, true);
+#endif
             Scribe_Values.Look(ref BonusLootChance, "BonusLootChance", 1.5f, true);
             Scribe_Values.Look(ref ChanceForTreasure, "RewardTreasureLootboxChance", 0.25f, true);
             Scribe_Values.Look(ref ChanceForSilverS, "RewardCommonSmallLootboxChance", 0.20f, true);

@@ -64,6 +64,12 @@ namespace Lanilor.LootBoxes.Mod
                 "LootBoxes_SettingsUseBonusLootChanceDesc".Translate());
             ls.Gap();
 
+#if V13 || V12 || V11
+            ls.CheckboxLabeled("LootBoxes_SettingsAllowPsychicAmplifierSpawn".Translate(), ref Settings.AllowPsychicAmplifierSpawn,
+                "LootBoxes_SettingsAllowPsychicAmplifierSpawnDesc".Translate());
+            ls.Gap();
+#endif
+
             ls.Label("LootBoxes_SettingsBonusLootChance".Translate() + Settings.BonusLootChance + "x");
             ls.Gap();
             Settings.BonusLootChance = Widgets.HorizontalSlider(ls.GetRect(20f), Settings.BonusLootChance, 1, 5, false,

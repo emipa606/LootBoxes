@@ -55,8 +55,8 @@ namespace Lanilor.LootBoxes.Things
                 {
                     rewardValue = MaximumMarketRewardValue * Find.Storyteller.difficulty.questRewardValueFactor,
                     minGeneratedRewardValue = 250f,
-                    //giverFaction = usedBy.Faction,
-                    populationIntent = QuestTuning.PopIncreasingRewardWeightByPopIntentCurve.Evaluate(StorytellerUtilityPopulation.PopulationIntentForQuest),
+                    giverFaction = usedBy.Faction,
+                    populationIntent = QuestTuning.PopIncreasingRewardWeightByPopIntentCurve.Evaluate(StorytellerUtilityPopulation.PopulationIntent),
                     allowGoodwill = false,
                     allowRoyalFavor = false,
                     giveToCaravan = false,
@@ -71,8 +71,22 @@ namespace Lanilor.LootBoxes.Things
 #if V10
                     var generatedItems = ThingSetMakerDefOf.Reward_TradeRequest.root.Generate(makerParams);
 #else
-                    var generatedItems =
- RewardsGenerator.Generate(generatorParams).Cast<Reward_Items>().SelectMany(k => k.items);
+                    var generatedItems = new List<Thing>();
+                    var firstGen = RewardsGenerator.Generate(generatorParams).Cast<Reward_Items>().SelectMany(k => k.items).ToArray();
+
+                    for (var i = 0; i < firstGen.Length; i++)
+                    {
+                        var thing = firstGen[i];
+                        if (thing.def == ThingDefOf.PsychicAmplifier && (!ModLootBoxes.Settings.AllowPsychicAmplifierSpawn || generatedItems.Exists(k => k.def == thing.def)))
+                        {
+                            generatorParams.disallowedThingDefs = new List<ThingDef> { ThingDefOf.PsychicAmplifier };
+                            firstGen = RewardsGenerator.Generate(generatorParams).Cast<Reward_Items>().SelectMany(k => k.items).ToArray();
+                            i = 0;
+                            continue;
+                        }
+
+                        generatedItems.Add(thing);
+                    }
 #endif
                     var chosenItems = generatedItems.InRandomOrder().Take(spawnCount - used).ToList();
 
@@ -85,6 +99,10 @@ namespace Lanilor.LootBoxes.Things
                         }
 
                         GenPlace.TryPlaceThing(reward, c, map, ThingPlaceMode.Near);
+#if V13 || V12 || V11
+                        if (reward.def == ThingDefOf.PsychicAmplifier)
+                            Find.History.Notify_PsylinkAvailable();
+#endif
                     }
 
                     used += Math.Min(taken, chosenItems.Count);
