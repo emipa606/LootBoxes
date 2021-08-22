@@ -1,4 +1,5 @@
-﻿using RimWorld;
+﻿using JetBrains.Annotations;
+using RimWorld;
 
 namespace Lanilor.LootBoxes.DefOfs
 {
@@ -10,6 +11,6 @@ namespace Lanilor.LootBoxes.DefOfs
             DefOfHelper.EnsureInitializedInCtor(typeof(LootboxRecordDefOf));
         }
 
-        public static RecordDef LootBoxesOpened;
+        [UsedImplicitly] public static RecordDef LootBoxesOpened;
     }
 }

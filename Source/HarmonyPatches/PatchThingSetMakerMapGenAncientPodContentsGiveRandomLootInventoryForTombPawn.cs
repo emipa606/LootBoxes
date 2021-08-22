@@ -1,9 +1,9 @@
-﻿using Lanilor.LootBoxes.DefOfs;
+﻿using JetBrains.Annotations;
+using Lanilor.LootBoxes.DefOfs;
 using RimWorld;
 using Verse;
 #if V10
 using Harmony;
-
 #else
 using HarmonyLib;
 #endif
@@ -12,9 +12,11 @@ namespace Lanilor.LootBoxes.HarmonyPatches
 {
     [HarmonyPatch(typeof(ThingSetMaker_MapGen_AncientPodContents))]
     [HarmonyPatch("GiveRandomLootInventoryForTombPawn")]
+    [UsedImplicitly]
     public class PatchThingSetMakerMapGenAncientPodContentsGiveRandomLootInventoryForTombPawn
     {
         [HarmonyPostfix]
+        [UsedImplicitly]
         public static void Postfix(Pawn p)
         {
             ThingDef lootToAdd = null;

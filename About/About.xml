@@ -20,6 +20,8 @@
 	</modDependencies>
 	<loadAfter>
 		<li>brrainz.harmony</li>
+		<li>Ludeon.RimWorld</li>
+		<li>Ludeon.RimWorld.Royalty</li>
 	</loadAfter>
 	<description>
 &lt;size=22&gt;Loot Boxes&lt;/size&gt;

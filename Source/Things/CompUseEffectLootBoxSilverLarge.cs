@@ -57,12 +57,12 @@ namespace Lanilor.LootBoxes.Things
             new LootboxReward(3, new Reward("Shell_HighExplosive", 1, 1, 10), new Reward("Shell_Incendiary", 1, 1, 10),
                 new Reward("Shell_EMP", 1, 1, 2), new Reward("Shell_Firefoam", 1, 1, 2)),
             new LootboxReward(3, new Reward("ElephantTusk", 1, 1, 4)),
-#if V12
-            new LootboxReward(1, new Reward("Apparel_PsychicInsanityLance")),
-            new LootboxReward(1, new Reward("Apparel_PsychicShockLance")),
-#else
+#if V10 || V11
             new LootboxReward(1, new Reward("PsychicInsanityLance")),
             new LootboxReward(1, new Reward("PsychicShockLance")),
+#else
+            new LootboxReward(1, new Reward("Apparel_PsychicInsanityLance")),
+            new LootboxReward(1, new Reward("Apparel_PsychicShockLance")),
 #endif
             new LootboxReward(1, new Reward("PsychicAnimalPulser")),
             new LootboxReward(1, new Reward("PsychicSoothePulser")),

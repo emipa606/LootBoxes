@@ -77,15 +77,15 @@ namespace Lanilor.LootBoxes.Things
             new LootboxReward(1, new Reward("MechSerumResurrector")),
             new LootboxReward(3, new Reward("PsychicAnimalPulser", 1, 1, 2)),
             new LootboxReward(3, new Reward("PsychicSoothePulser", 1, 1, 2)),
-#if V12
-            new LootboxReward(3, new Reward("Apparel_PsychicInsanityLance", 1, 1, 2)),
-            new LootboxReward(3, new Reward("Apparel_PsychicShockLance", 1, 1, 2)),
-            new LootboxReward(1, new Reward("Apparel_PsychicInsanityLance"), new Reward("Apparel_PsychicShockLance"),
-                new Reward("PsychicAnimalPulser"), new Reward("PsychicSoothePulser")),
-#else
+#if V10 || V11
             new LootboxReward(3, new Reward("PsychicInsanityLance", 1, 1, 2)),
             new LootboxReward(3, new Reward("PsychicShockLance", 1, 1, 2)),
             new LootboxReward(1, new Reward("PsychicInsanityLance"), new Reward("PsychicShockLance"),
+                new Reward("PsychicAnimalPulser"), new Reward("PsychicSoothePulser")),
+#else
+            new LootboxReward(3, new Reward("Apparel_PsychicInsanityLance", 1, 1, 2)),
+            new LootboxReward(3, new Reward("Apparel_PsychicShockLance", 1, 1, 2)),
+            new LootboxReward(1, new Reward("Apparel_PsychicInsanityLance"), new Reward("Apparel_PsychicShockLance"),
                 new Reward("PsychicAnimalPulser"), new Reward("PsychicSoothePulser")),
 #endif
             new LootboxReward(6, new Reward("Gun_Revolver", 1, 1, 5)),

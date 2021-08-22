@@ -1,4 +1,5 @@
-﻿using RimWorld;
+﻿using JetBrains.Annotations;
+using RimWorld;
 using Verse;
 
 namespace Lanilor.LootBoxes.DefOfs
@@ -11,11 +12,11 @@ namespace Lanilor.LootBoxes.DefOfs
             DefOfHelper.EnsureInitializedInCtor(typeof(LootboxDefOf));
         }
 
-        public static ThingDef LootBoxTreasure;
-        public static ThingDef LootBoxSilverSmall;
-        public static ThingDef LootBoxSilverLarge;
-        public static ThingDef LootBoxGoldSmall;
-        public static ThingDef LootBoxGoldLarge;
-        public static ThingDef LootBoxPandora;
+        [UsedImplicitly] public static ThingDef LootBoxTreasure;
+        [UsedImplicitly] public static ThingDef LootBoxSilverSmall;
+        [UsedImplicitly] public static ThingDef LootBoxSilverLarge;
+        [UsedImplicitly] public static ThingDef LootBoxGoldSmall;
+        [UsedImplicitly] public static ThingDef LootBoxGoldLarge;
+        [UsedImplicitly] public static ThingDef LootBoxPandora;
     }
 }
