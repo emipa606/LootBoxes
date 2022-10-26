@@ -6,7 +6,7 @@ namespace Lanilor.LootBoxes.Mod
     {
         public bool UseIngameRewardsGenerator = true;
         public bool UseBonusLootChance = true;
-#if V13 || V12 || V11
+#if !V10
         public bool AllowPsychicAmplifierSpawn = true;
 #endif
 
@@ -20,52 +20,36 @@ namespace Lanilor.LootBoxes.Mod
         public float ChanceForPandora = 1;
 
         public int SetMinTreasure = 1;
-
         public int SetMaxTreasure = 3;
-
         public float TreasureLootboxChanceMultiplier = 0.25f;
-
         public float TreasureRewardValue = 150;
 
         public int SetMinSilverS = 2;
-
         public int SetMaxSilverS = 3;
-
         public float SilverSLootboxChanceMultiplier = 0.5f;
-
         public float SilverSRewardValue = 300;
 
         public int SetMinSilverL = 1;
-
         public int SetMaxSilverL = 12;
-
         public float SilverLLootboxChanceMultiplier = 0.75f;
-
         public float SilverLRewardValue = 600;
 
         public int SetMinGoldS = 1;
-
         public int SetMaxGoldS = 4;
-
         public float GoldSLootboxChanceMultiplier = 1;
-
         public float GoldSRewardValue = 650;
 
         public int SetMinGoldL = 3;
-
         public int SetMaxGoldL = 9;
-
         public float GoldLLootboxChanceMultiplier = 1.25f;
-
         public float GoldLRewardValue = 1000;
-
 
         public override void ExposeData()
         {
             base.ExposeData();
             Scribe_Values.Look(ref UseIngameRewardsGenerator, "UseIngameRewardsGenerator", true, true);
             Scribe_Values.Look(ref UseBonusLootChance, "UseBonusLootChance", true, true);
-#if V13 || V12 || V11
+#if !V10
             Scribe_Values.Look(ref AllowPsychicAmplifierSpawn, "AllowPsychicAmplifierSpawn", true, true);
 #endif
             Scribe_Values.Look(ref BonusLootChance, "BonusLootChance", 1.5f, true);
@@ -99,6 +83,48 @@ namespace Lanilor.LootBoxes.Mod
             Scribe_Values.Look(ref GoldLLootboxChanceMultiplier, "GoldLargeBoxRewardLootboxChanceMultiplier", 1.25f,
                 true);
             Scribe_Values.Look(ref GoldLRewardValue, "GoldLargeBoxRewardItemsValue", 1000, true);
+        }
+
+        public void Reset()
+        {
+            UseIngameRewardsGenerator = true;
+            UseBonusLootChance = true;
+#if !V10
+            AllowPsychicAmplifierSpawn = true;
+#endif
+            BonusLootChance = 1.5f;
+
+            ChanceForTreasure = 25;
+            ChanceForSilverS = 20;
+            ChanceForSilverL = 15;
+            ChanceForGoldS = 10;
+            ChanceForGoldL = 5;
+            ChanceForPandora = 1;
+
+            SetMinTreasure = 1;
+            SetMaxTreasure = 3;
+            TreasureLootboxChanceMultiplier = 0.25f;
+            TreasureRewardValue = 150;
+
+            SetMinSilverS = 2;
+            SetMaxSilverS = 3;
+            SilverSLootboxChanceMultiplier = 0.5f;
+            SilverSRewardValue = 300;
+
+            SetMinSilverL = 1;
+            SetMaxSilverL = 12;
+            SilverLLootboxChanceMultiplier = 0.75f;
+            SilverLRewardValue = 600;
+
+            SetMinGoldS = 1;
+            SetMaxGoldS = 4;
+            GoldSLootboxChanceMultiplier = 1;
+            GoldSRewardValue = 650;
+
+            SetMinGoldL = 3;
+            SetMaxGoldL = 9;
+            GoldLLootboxChanceMultiplier = 1.25f;
+            GoldLRewardValue = 1000;
         }
     }
 }

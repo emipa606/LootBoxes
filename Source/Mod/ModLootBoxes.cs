@@ -13,6 +13,7 @@ using HarmonyLib;
 
 namespace Lanilor.LootBoxes.Mod
 {
+    [UsedImplicitly]
     public class ModLootBoxes : Verse.Mod
     {
         public static ModSettingsLootBoxes Settings;
@@ -24,7 +25,7 @@ namespace Lanilor.LootBoxes.Mod
 #if V10
             var harmony = HarmonyInstance.Create("rimworld.lanilor.lootboxes");
 #else
-            var harmony = new HarmonyLib.Harmony("rimworld.lanilor.lootboxes");
+            var harmony = new Harmony("rimworld.lanilor.lootboxes");
 #endif
             harmony.PatchAll(Assembly.GetExecutingAssembly());
         }
@@ -44,13 +45,13 @@ namespace Lanilor.LootBoxes.Mod
             inRect.yMin += 15f;
             inRect.yMax -= 15f;
 
-            float columnWidth = inRect.width - 50f;
+            var columnWidth = inRect.width - 50f;
             var ls = new Listing_Standard
             {
                 ColumnWidth = columnWidth
             };
 
-            var r = new Rect(0f, 0f, inRect.width - 16f, inRect.height * 1.75f);
+            var r = new Rect(0f, 0f, inRect.width - 16f, inRect.height * 2f);
             Widgets.BeginScrollView(inRect, ref m_Scroll, r);
             ls.Begin(r);
 
@@ -64,7 +65,7 @@ namespace Lanilor.LootBoxes.Mod
                 "LootBoxes_SettingsUseBonusLootChanceDesc".Translate());
             ls.Gap();
 
-#if V13 || V12 || V11
+#if !V10
             ls.CheckboxLabeled("LootBoxes_SettingsAllowPsychicAmplifierSpawn".Translate(), ref Settings.AllowPsychicAmplifierSpawn,
                 "LootBoxes_SettingsAllowPsychicAmplifierSpawnDesc".Translate());
             ls.Gap();
@@ -111,8 +112,7 @@ namespace Lanilor.LootBoxes.Mod
 
             ls.GapLine();
 
-            if (ls.ButtonText($"LootBoxes_Settings{m_Selected}ButtonLabel".Translate(),
-                $"LootBoxes_Settings{m_Selected}Button".Translate()))
+            if (ls.ButtonText($"LootBoxes_Settings{m_Selected}ButtonLabel".Translate(), $"LootBoxes_Settings{m_Selected}Button".Translate()))
             {
                 var window = new FloatMenu(new List<FloatMenuOption>
                 {
@@ -178,24 +178,20 @@ namespace Lanilor.LootBoxes.Mod
 
             ls.Label("LootBoxes_SettingsMinSet".Translate() + min, -1, "LootBoxes_MinSetTooltip".Translate());
             ls.Gap();
-            min = Math.Min(max,
-                (int) Widgets.HorizontalSlider(ls.GetRect(20f), min, 1, 50, false, null, "1", "50", 1f));
+            min = Math.Min(max, (int)Widgets.HorizontalSlider(ls.GetRect(20f), min, 1, 50, false, null, "1", "50", 1f));
             ls.Gap();
 
             ls.Label("LootBoxes_SettingsMaxSet".Translate() + max, -1, "LootBoxes_MaxSetTooltip".Translate());
             ls.Gap();
-            max = Math.Max(min,
-                (int) Widgets.HorizontalSlider(ls.GetRect(20f), max, 1, 50, false, null, "1", "50", 1f));
+            max = Math.Max(min, (int)Widgets.HorizontalSlider(ls.GetRect(20f), max, 1, 50, false, null, "1", "50", 1f));
             ls.Gap();
 
-            ls.Label("LootBoxes_SettingsRewardValue".Translate() + value, -1,
-                "LootBoxes_RewardValueTooltip".Translate());
+            ls.Label("LootBoxes_SettingsRewardValue".Translate() + value, -1, "LootBoxes_RewardValueTooltip".Translate());
             ls.Gap();
-            value = (int) Widgets.HorizontalSlider(ls.GetRect(20f), value, 10, 5000, false, null, "10", "5000", 10f);
+            value = (int)Widgets.HorizontalSlider(ls.GetRect(20f), value, 10, 5000, false, null, "10", "5000", 10f);
             ls.Gap();
 
-            ls.Label("LootBoxes_SettingsLootboxChanceMult".Translate() + multiplier + "x", -1,
-                "LootBoxes_LootboxChanceMultTooltip".Translate());
+            ls.Label("LootBoxes_SettingsLootboxChanceMult".Translate() + multiplier + "x", -1, "LootBoxes_LootboxChanceMultTooltip".Translate());
             ls.Gap();
             multiplier = Widgets.HorizontalSlider(ls.GetRect(20f), multiplier, 0, 10, false, null, "0x", "10x", 0.01f);
             ls.GapLine();
@@ -233,6 +229,12 @@ namespace Lanilor.LootBoxes.Mod
                     Settings.GoldLLootboxChanceMultiplier = multiplier;
                     break;
             }
+
+            var reset = ls.ButtonText("LootBoxes_SettingsResetButtonLabel".Translate(),
+                "LootBoxes_SettingsResetButton".Translate());
+
+            if (reset)
+                Settings.Reset();
 
             ls.End();
             Widgets.EndScrollView();
