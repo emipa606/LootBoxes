@@ -11,6 +11,7 @@ Global
 		V11|Any CPU = V11|Any CPU
 		V12|Any CPU = V12|Any CPU
 		V13|Any CPU = V13|Any CPU
+		V14|Any CPU = V14|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{0A2E193B-C1AA-40E7-A8D8-C9240F0734AD}.V10|Any CPU.ActiveCfg = V10|Any CPU
@@ -21,6 +22,8 @@ Global
 		{0A2E193B-C1AA-40E7-A8D8-C9240F0734AD}.V12|Any CPU.Build.0 = V12|Any CPU
 		{0A2E193B-C1AA-40E7-A8D8-C9240F0734AD}.V13|Any CPU.ActiveCfg = V13|Any CPU
 		{0A2E193B-C1AA-40E7-A8D8-C9240F0734AD}.V13|Any CPU.Build.0 = V13|Any CPU
+		{0A2E193B-C1AA-40E7-A8D8-C9240F0734AD}.V14|Any CPU.ActiveCfg = V14|Any CPU
+		{0A2E193B-C1AA-40E7-A8D8-C9240F0734AD}.V14|Any CPU.Build.0 = V14|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

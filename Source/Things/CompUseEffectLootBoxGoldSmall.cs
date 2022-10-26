@@ -1,8 +1,10 @@
 ﻿using Lanilor.LootBoxes.Mod;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 
 namespace Lanilor.LootBoxes.Things
 {
+    [UsedImplicitly]
     public class CompUseEffectLootBoxGoldSmall : CompUseEffectLootBox
     {
         protected override LootBoxType LootBoxType => LootBoxType.GoldS;

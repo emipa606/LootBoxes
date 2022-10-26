@@ -60,7 +60,7 @@ namespace Lanilor.LootBoxes.Things
                     allowGoodwill = false,
                     allowRoyalFavor = false,
                     giveToCaravan = false,
-                    thingRewardItemsOnly = true,
+                    thingRewardItemsOnly = true
                 };
 #endif
 
@@ -99,7 +99,7 @@ namespace Lanilor.LootBoxes.Things
                         }
 
                         GenPlace.TryPlaceThing(reward, c, map, ThingPlaceMode.Near);
-#if V13 || V12 || V11
+#if !V10
                         if (reward.def == ThingDefOf.PsychicAmplifier)
                             Find.History.Notify_PsylinkAvailable();
 #endif
@@ -184,9 +184,7 @@ namespace Lanilor.LootBoxes.Things
 
         private static bool ShouldDrop(LootBoxType source, LootBoxType type)
         {
-            var multiplier = ModLootBoxes.Settings.TreasureLootboxChanceMultiplier;
-            var chance = ModLootBoxes.Settings.ChanceForTreasure;
-
+            float multiplier;
             switch (source)
             {
                 case LootBoxType.SilverS:
@@ -201,8 +199,12 @@ namespace Lanilor.LootBoxes.Things
                 case LootBoxType.GoldL:
                     multiplier = ModLootBoxes.Settings.GoldLLootboxChanceMultiplier;
                     break;
+                default:
+                    multiplier = ModLootBoxes.Settings.TreasureLootboxChanceMultiplier;
+                    break;
             }
 
+            float chance;
             switch (type)
             {
                 case LootBoxType.SilverS:
@@ -219,6 +221,9 @@ namespace Lanilor.LootBoxes.Things
                     break;
                 case LootBoxType.Pandora:
                     chance = ModLootBoxes.Settings.ChanceForPandora;
+                    break;
+                default:
+                    chance = ModLootBoxes.Settings.ChanceForTreasure;
                     break;
             }
 

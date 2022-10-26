@@ -7,6 +7,7 @@ using Verse;
 
 namespace Lanilor.LootBoxes.Things
 {
+    [UsedImplicitly]
     public class CompUseEffectLootBoxPandora : CompUseEffectLootBox
     {
         private static readonly Dictionary<List<IncidentCategoryDef>, IncidentGroupData> IncidentGroups =
@@ -44,22 +45,26 @@ namespace Lanilor.LootBoxes.Things
         {
             var map = usedBy.Map;
             Rand.PushState(parent.HashOffset());
-            var hostileActivity = GenHostility.AnyHostileActiveThreatToPlayer(map);
-            var selectedGroup = IncidentGroups.RandomElementByWeight(kvp => kvp.Value.Chance);
-            while (hostileActivity && selectedGroup.Key.Contains(IncidentCategoryDefOf.FactionArrival))
-                selectedGroup = IncidentGroups.RandomElementByWeight(kvp => kvp.Value.Chance);
-            var count = Rand.RangeInclusive(selectedGroup.Value.CountMin,
-                Rand.RangeInclusive(selectedGroup.Value.CountStep, selectedGroup.Value.CountMax));
-            for (var i = 0; i < count; i++)
-            {
-                var validIncidents =
-                    (from incident in from def in DefDatabase<IncidentDef>.AllDefs
-                            where selectedGroup.Key.Contains(def.category) && def.TargetAllowed(map)
-                            select def
-                        let parameters = StorytellerUtility.DefaultParmsNow(incident.category, map)
-                        where incident.Worker.CanFireNow(parameters)
-                        select incident).ToList();
 
+            var hostileActivity = GenHostility.AnyHostileActiveThreatToPlayer(map);
+
+            var selectedGroup = IncidentGroups
+                .Where(k => !hostileActivity || !k.Key.Contains(IncidentCategoryDefOf.FactionArrival))
+                .RandomElementByWeight(kvp => kvp.Value.Chance);
+
+            var numberToFire = Rand.RangeInclusive(selectedGroup.Value.CountMin,
+                Rand.RangeInclusive(selectedGroup.Value.CountStep, selectedGroup.Value.CountMax));
+
+            var validIncidents =
+                (from incident in from def in DefDatabase<IncidentDef>.AllDefs
+                        where selectedGroup.Key.Contains(def.category) && def.TargetAllowed(map)
+                        select def
+                    let parameters = StorytellerUtility.DefaultParmsNow(incident.category, map)
+                    where incident.Worker.CanFireNow(parameters)
+                    select incident).ToList();
+
+            for (; numberToFire > 0; numberToFire--)
+            {
                 var selectedIncident =
                     validIncidents.RandomElementByWeight(IncidentChanceFinal);
                 if (selectedIncident == null) continue;
@@ -67,7 +72,7 @@ namespace Lanilor.LootBoxes.Things
                 var storyTellerParams = StorytellerUtility.DefaultParmsNow(selectedIncident.category, map);
                 if (selectedIncident.pointsScaleable)
                 {
-                    var storytellerComp = Find.Storyteller.storytellerComps.First(x =>
+                    var storytellerComp = Find.Storyteller.storytellerComps.FirstOrDefault(x =>
                         x is StorytellerComp_OnOffCycle || x is StorytellerComp_RandomMain);
                     if (storytellerComp != null)
                         storyTellerParams =
@@ -95,16 +100,21 @@ namespace Lanilor.LootBoxes.Things
         {
             if (def.chanceFactorByPopulationCurve == null) return 1f;
 
-            var pawnCount = PawnsFinder.AllMapsCaravansAndTravelingTransportPods_Alive_Colonists.Count();
+            var pawns = PawnsFinder.AllMapsCaravansAndTravelingTransportPods_Alive_Colonists;
+#if V10
+            var pawnCount = pawns.Count();
+#else
+            var pawnCount = pawns.Count;
+#endif
             return def.chanceFactorByPopulationCurve.Evaluate(pawnCount);
         }
 
-        private struct IncidentGroupData
+        private readonly struct IncidentGroupData
         {
-            public float Chance;
-            public int CountMin;
-            public int CountStep;
-            public int CountMax;
+            public float Chance { get; }
+            public int CountMin { get; }
+            public int CountStep { get; }
+            public int CountMax { get; }
 
             public IncidentGroupData(float chance, int countMin, int countStep, int countMax)
             {
