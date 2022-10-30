@@ -46,4 +46,6 @@
 	<LootBoxes_SettingsLootboxChanceMult>Multiplicador de posibilidad para que otra Caja aparezca: </LootBoxes_SettingsLootboxChanceMult>
 	<LootBoxes_LootboxChanceMultTooltip>Define el multiplicador que se aplica a las posibilidades definidas anteriormente.</LootBoxes_LootboxChanceMultTooltip>
 
+	<LootBoxes_SettingsResetButtonLabel>Reestablecer configuracion</LootBoxes_SettingsResetButtonLabel>
+	<LootBoxes_SettingsResetButton>Reestablece todas las opciones a los valores predeterminados.</LootBoxes_SettingsResetButton>
 </LanguageData>

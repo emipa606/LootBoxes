@@ -19,16 +19,15 @@ namespace Lanilor.LootBoxes.HarmonyPatches
         [UsedImplicitly]
         public static void Postfix(Pawn p)
         {
-            ThingDef lootToAdd = null;
             var random = Rand.Value;
-            if (random < 0.10f)
-                lootToAdd = LootboxDefOf.LootBoxTreasure;
-            else if (random < 0.35f)
-                lootToAdd = LootboxDefOf.LootBoxSilverSmall;
-            else if (random < 0.40f)
-                lootToAdd = LootboxDefOf.LootBoxGoldSmall;
-            else if (random < 0.50f)
-                lootToAdd = LootboxDefOf.LootBoxPandora;
+            var lootToAdd = random switch
+            {
+                < 0.10f => LootboxDefOf.LootBoxTreasure,
+                < 0.35f => LootboxDefOf.LootBoxSilverSmall,
+                < 0.40f => LootboxDefOf.LootBoxGoldSmall,
+                < 0.50f => LootboxDefOf.LootBoxPandora,
+                _ => null
+            };
 
             // Create and add loot if needed
             if (lootToAdd == null) return;

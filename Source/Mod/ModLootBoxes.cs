@@ -57,6 +57,9 @@ namespace Lanilor.LootBoxes.Mod
 
             ls.Gap();
 
+            var reset = ls.ButtonText("LootBoxes_SettingsResetButtonLabel".Translate(),
+                "LootBoxes_SettingsResetButton".Translate());
+
             ls.CheckboxLabeled("LootBoxes_SettingsUseIngameRewardsGenerator".Translate(),
                 ref Settings.UseIngameRewardsGenerator, "LootBoxes_SettingsUseIngameRewardsGeneratorDesc".Translate());
             ls.Gap();
@@ -112,19 +115,20 @@ namespace Lanilor.LootBoxes.Mod
 
             ls.GapLine();
 
-            if (ls.ButtonText($"LootBoxes_Settings{m_Selected}ButtonLabel".Translate(), $"LootBoxes_Settings{m_Selected}Button".Translate()))
+            if (ls.ButtonText($"LootBoxes_Settings{m_Selected}ButtonLabel".Translate(),
+                    $"LootBoxes_Settings{m_Selected}Button".Translate()))
             {
                 var window = new FloatMenu(new List<FloatMenuOption>
                 {
-                    new FloatMenuOption("LootBoxes_SettingsTreasureButtonLabel".Translate(),
+                    new("LootBoxes_SettingsTreasureButtonLabel".Translate(),
                         () => m_Selected = LootBoxType.Treasure),
-                    new FloatMenuOption("LootBoxes_SettingsSilverSButtonLabel".Translate(),
+                    new("LootBoxes_SettingsSilverSButtonLabel".Translate(),
                         () => m_Selected = LootBoxType.SilverS),
-                    new FloatMenuOption("LootBoxes_SettingsSilverLButtonLabel".Translate(),
+                    new("LootBoxes_SettingsSilverLButtonLabel".Translate(),
                         () => m_Selected = LootBoxType.SilverL),
-                    new FloatMenuOption("LootBoxes_SettingsGoldSButtonLabel".Translate(),
+                    new("LootBoxes_SettingsGoldSButtonLabel".Translate(),
                         () => m_Selected = LootBoxType.GoldS),
-                    new FloatMenuOption("LootBoxes_SettingsGoldLButtonLabel".Translate(),
+                    new("LootBoxes_SettingsGoldLButtonLabel".Translate(),
                         () => m_Selected = LootBoxType.GoldL)
                 })
                 {
@@ -186,12 +190,14 @@ namespace Lanilor.LootBoxes.Mod
             max = Math.Max(min, (int)Widgets.HorizontalSlider(ls.GetRect(20f), max, 1, 50, false, null, "1", "50", 1f));
             ls.Gap();
 
-            ls.Label("LootBoxes_SettingsRewardValue".Translate() + value, -1, "LootBoxes_RewardValueTooltip".Translate());
+            ls.Label("LootBoxes_SettingsRewardValue".Translate() + value, -1,
+                "LootBoxes_RewardValueTooltip".Translate());
             ls.Gap();
             value = (int)Widgets.HorizontalSlider(ls.GetRect(20f), value, 10, 5000, false, null, "10", "5000", 10f);
             ls.Gap();
 
-            ls.Label("LootBoxes_SettingsLootboxChanceMult".Translate() + multiplier + "x", -1, "LootBoxes_LootboxChanceMultTooltip".Translate());
+            ls.Label("LootBoxes_SettingsLootboxChanceMult".Translate() + multiplier + "x", -1,
+                "LootBoxes_LootboxChanceMultTooltip".Translate());
             ls.Gap();
             multiplier = Widgets.HorizontalSlider(ls.GetRect(20f), multiplier, 0, 10, false, null, "0x", "10x", 0.01f);
             ls.GapLine();
@@ -229,9 +235,6 @@ namespace Lanilor.LootBoxes.Mod
                     Settings.GoldLLootboxChanceMultiplier = multiplier;
                     break;
             }
-
-            var reset = ls.ButtonText("LootBoxes_SettingsResetButtonLabel".Translate(),
-                "LootBoxes_SettingsResetButton".Translate());
 
             if (reset)
                 Settings.Reset();

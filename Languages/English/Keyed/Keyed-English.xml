@@ -46,4 +46,6 @@
 	<LootBoxes_SettingsLootboxChanceMult>Chance multiplier for another Lootbox to spawn: </LootBoxes_SettingsLootboxChanceMult>
 	<LootBoxes_LootboxChanceMultTooltip>Defines the multiplier applied to the previously set chances that defines how likely another lootbox is to spawn from this opened lootbox.</LootBoxes_LootboxChanceMultTooltip>
 
+	<LootBoxes_SettingsResetButtonLabel>Reset all settings</LootBoxes_SettingsResetButtonLabel>
+	<LootBoxes_SettingsResetButton>Resets all settings to default values.</LootBoxes_SettingsResetButton>
 </LanguageData>

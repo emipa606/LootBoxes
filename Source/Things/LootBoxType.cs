@@ -1,12 +1,11 @@
-namespace Lanilor.LootBoxes.Things
+namespace Lanilor.LootBoxes.Things;
+
+public enum LootBoxType
 {
-    public enum LootBoxType
-    {
-        Treasure,
-        SilverS,
-        SilverL,
-        GoldS,
-        GoldL,
-        Pandora
-    }
+    Treasure,
+    SilverS,
+    SilverL,
+    GoldS,
+    GoldL,
+    Pandora
 }
