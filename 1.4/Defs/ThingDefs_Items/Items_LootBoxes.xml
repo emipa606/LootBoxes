@@ -21,7 +21,7 @@
 				<useJob>OpenLootBox</useJob>
 				<useLabel>Open box</useLabel>
 			</li>
-			<li Class="CompProperties_UseEffect">
+			<li Class="CompProperties_UseEffectDestroySelf">
 				<compClass>CompUseEffect_DestroySelf</compClass>
 			</li>
 		</comps>
