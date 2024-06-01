@@ -1,7 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Manifest>
-	<identifier>LootBoxes</identifier>
-	<version>1.4.0</version>
-	<manifestUri>https://raw.githubusercontent.com/Lanilor/Rimworld-Loot-Boxes/master/About/Manifest.xml</manifestUri>
-	<downloadUri>https://github.com/Lanilor/Rimworld-Loot-Boxes/releases/latest</downloadUri>
+  <identifier>LootBoxes</identifier>
+  <version>1.5.1</version>
+  <dependencies />
+  <incompatibleWith />
+  <loadBefore />
+  <loadAfter />
+  <manifestUri>https://raw.githubusercontent.com/emipa606/LootBoxes/master/About/Manifest.xml</manifestUri>
+  <downloadUri>https://github.com/emipa606/LootBoxes/releases</downloadUri>
 </Manifest>

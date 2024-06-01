@@ -1,84 +1,134 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-	<name>Loot Boxes</name>
-	<author>Lanilor, Pustalorc</author>
-	<url>https://github.com/Lanilor/Rimworld-Loot-Boxes</url>
-  	<packageId>lanilor.lootboxes</packageId>
-	<supportedVersions>
-		<li>1.0</li>
-		<li>1.1</li>
-		<li>1.2</li>
-		<li>1.3</li>
-		<li>1.4</li>
-	</supportedVersions>
-	<modDependencies>
-		<li>
-			<packageId>brrainz.harmony</packageId>
-			<displayName>Harmony</displayName>
-			<steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
-			<downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
-		</li>
-	</modDependencies>
-	<loadAfter>
-		<li>brrainz.harmony</li>
-		<li>Ludeon.RimWorld</li>
-		<li>Ludeon.RimWorld.Royalty</li>
-		<li>Ludeon.RimWorld.Ideology</li>
-		<li>Ludeon.RimWorld.Biotech</li>
-	</loadAfter>
-	<description>
-&lt;size=22&gt;Loot Boxes&lt;/size&gt;
+  <name>Loot Boxes (Continued)</name>
+  <packageId>Mlie.LootBoxes</packageId>
+  <author>Lanilor</author>
+  <url>https://github.com/emipa606/LootBoxes</url>
+  <supportedVersions>
+    <li>1.0</li>
+    <li>1.1</li>
+    <li>1.2</li>
+    <li>1.3</li>
+    <li>1.4</li>
+    <li>1.5</li>
+  </supportedVersions>
+  <modDependencies>
+    <li>
+      <packageId>brrainz.harmony</packageId>
+      <displayName>Harmony</displayName>
+      <steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+      <downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
+    </li>
+  </modDependencies>
+  <loadAfter>
+    <li>brrainz.harmony</li>
+  </loadAfter>
+  <description>[img]https://i.imgur.com/buuPQel.png[/img]
+Update of Lanilors mod https://steamcommunity.com/sharedfiles/filedetails/?id=1560291802
+based on the update by Pustalorc https://steamcommunity.com/sharedfiles/filedetails/?id=2191113747
 
-Add loot boxes and Pandoras box to the game and gamble for the ultimate treasure and challenges!
+[h2]Changes done by Pustalorc[/h2]
+[list]
+[*]Obfuscated spawn tables have been de-obfuscated and are now clear on what will be dropped
+[*]In-game rewards generator has been added (allows modded loot to be spawned!)
+[*]Setting to switch between spawn tables and in-game rewards generator has been added
+[*]Reward frequency has been reduced and the game decides when to reward loot boxes
+[*]Load order was specified to be after harmony
+[*]Added Spanish translations
+[*]Loot boxes can be configured (Min and max drops, drop reward value, chance for other loot-boxes to drop)
+[/list]
 
-Buy loot boxes from traders or build a mysterious red chest and exchange gold and silver for different kinds of loot boxes with different items in them.
-Now with an improved Pandoras box! Opening one spawns incidents and can bless your colony or lead it into disaster.
+[h3]Added loot boxes to[/h3]
+[list]
+[*]Quests
+[*]Loot stashes
+[*]Traders and Orbital Traders
+[*]Any mods that add quests or traders also can give you these as rewards
+[*]Any mods that use RewardsGenerator also can give you loot boxes.
+[*]Other Loot Boxes (chances modifiable in configuration)
+[*]By crafting them with the Red Chest (a building that you can make under the Production tab of Architect)
+[/list]
 
-&lt;b&gt;&lt;size=15&gt;Treasure chest&lt;/size&gt;&lt;/b&gt;&lt;size=4&gt;
+[img]https://i.imgur.com/pufA0kM.png[/img]
 
-&lt;/size&gt;A small loot box which contains valuable items like silver, gold, or thrumbo horns. There may even be a large golden chest in it!
+[table]
+    [tr][td][url=https://dsc.gg/mlie][img]https://i.imgur.com/zdzzBrc.png[/img][/url][/td] [td][url=https://github.com/emipa606/LootBoxes][img]https://i.imgur.com/kTkpTOE.png[/img][/url][/td]
+    [/tr]
+    [tr]
+        [td][img]https://i.imgur.com/WjDSfUn.png[/img][/td]
+        [td][img]https://i.imgur.com/Be8E2qJ.png[/img][/td]
+    [/tr]
+[/table]
+	
+[img]https://i.imgur.com/Z4GOv8H.png[/img]
+[h1]No joke/meme mod! Add loot boxes and Pandoras box to the game and gamble for the ultimate treasure and challenges![/h1]
 
-&lt;i&gt;» A golden treasure chest. Fort knox in a box! Become the richest colony in the galaxy with a little bit of luck!&lt;/i&gt;
+Buy loot boxes from traders or build a mysterious red chest and exchange gold and silver to buy different kinds of loot boxes with different items in them.
 
-&lt;b&gt;&lt;size=15&gt;Small common chest&lt;/size&gt;&lt;/b&gt;&lt;size=4&gt;
+[b]Recent updates:[/b]
+1.0.1: Now with an improved Pandoras box! Opening one spawns incidents and can bless your colony or lead it into disaster.
+1.0.3: Increased chances to get loot chests from quests, item stashes and ancient dangers.
 
-&lt;/size&gt;A simple small loot box which contains items which help you at the start of the game. Food, material, some valueables, apparel, even weapons and more.
-
-&lt;i&gt;» A small common loot box. Open it and get a change to receive powerful and valuable items!&lt;/i&gt;
-
-&lt;b&gt;&lt;size=15&gt;Large common chest&lt;/size&gt;&lt;/b&gt;&lt;size=4&gt;
-
-&lt;/size&gt;A simple large loot box. This one can contain many different items. With some luck you can get enough material to build a small base, weapons to arm your whole colony or some really rare artefacts.
-
-&lt;i&gt;» A large common loot box. The true test of luck! Open it and you may get something awesome or many useful items. Or both!&lt;/i&gt;
-
-&lt;b&gt;&lt;size=15&gt;Small golden chest&lt;/size&gt;&lt;/b&gt;&lt;size=4&gt;
-
-&lt;/size&gt;The small golden chest maybe small but it has it all! You can get valuables, rare artefacts, archotech stuff, advanced armor or high-tech weapons. There can even be multiple power armor sets in it. Don't ask how they fit in such a small box.
-
-&lt;i&gt;» A small golden loot box. There may be some really nice stuff in here! Get a change to receive some of the best items on the rim!&lt;/i&gt;
-
-&lt;b&gt;&lt;size=15&gt;Large golden chest&lt;/size&gt;&lt;/b&gt;&lt;size=4&gt;
-
-&lt;/size&gt;The large golden chest contains even more stuff than the small one. Naturally. And to top that, there is also more better stuff in it. The true loot box for advanced colonies.
-
-&lt;i&gt;» A large golden loot box. Fulfill all your dreams with this extraordinary loot crate! The highest chance to get the best and most expensive items!&lt;/i&gt;
-
-&lt;b&gt;&lt;size=15&gt;Pandoras box&lt;/size&gt;&lt;/b&gt;&lt;size=4&gt;
-
-&lt;/size&gt;A mysterious box which creates incidents when opening it. Pandora can bless your colony or lead it into disaster. Are you brave enough to open one?
-
-&lt;i&gt;» Pandoras box. What may be in here?&lt;/i&gt;
+[h1]With all the EA related comments I want to add something:[/h1] This mod was not designed as a satire against EA. In the Rimworld discord, a few times people talked about that it would be fun to have loot boxes in the game, so I simply made such a mod. This loot boxes are a totally valid game element with a relatively balanced win rate.
 
 
-&lt;size=18&gt;Notes&lt;/size&gt;
+[h1]6 different kinds of loot chests to obtain[/h1]
+
+[b]Treasure chest[/b]
+A small loot box which contains valuable items like silver, gold, or thrumbo horns. There may even be a golden chest in it!
+
+[i]» A golden treasure chest. Fort knox in a box! Become the richest colony in the galaxy with a little bit of luck![/i]
+
+[b]Small common chest[/b]
+A simple small loot box which contains items which help you at the start of the game. Food, material, some valueables, apparel, even weapons and more.
+
+[i]» A small common loot box. Open it and get a change to recive powerful and valuable items![/i]
+
+[b]Large common chest[/b]
+A simple large loot box. This one can contain many different items. With some luck you can get enough material to build a small base, weapons to arm your whole colony or some really rare artefacts.
+
+[i]» A large common loot box. The true test of luck! Open it and you may get something awesome or many useful items. Or both![/i]
+
+[b]Small golden chest[/b]
+The small golden chest maybe small but it has it all! You can get valuables, rare artefacts, archotech stuff, advanced armor or high-tech weapons. There can even be multiple power armor sets in it. Don't ask how they fit in such a small box.
+
+[i]» A small golden loot box. There may be some really nice stuff in here! Get a change to recive some of the best items on the rim![/i]
+
+[b]Large golden chest[/b]
+The large golden chest contains even more stuff than the small one. Naturally. And to top that, there is also more better stuff in it. The true loot box for advanced colonies.
+
+[i]» A large golden loot box. Fulfill all your dreams with this extraordinary loot crate! The highest chance to get the best and most expensive items![/i]
+
+[b]Pandoras box[/b]
+A mysterious box which creates incidents when opening it. Pandora can bless your colony or lead it into disaster. Are you brave enough to open one?
+
+[i]» Pandoras box. What may be in here?[/i]
+
+
+[h1]Notes[/h1]
+
+Does only contain vanilla items. I value good balancing in my mods and to do this the loot tabes are fixed. Creating dynamic loot tables and balancing them through calculations would be possible, but this was just a quick mod I made while I had no motivation to work on my main mod. If this mod gets popular, I probably improve it further and add all kinds of cool featues.
 
 Can be added to existing saves. To remove it, be sure to remove all objects from this mod from your world first. (Like the loot boxes itself, of course you can keep the loot you got out of them.)
 
-Art made by Vagabond. Check out his Fantasy Goblins mod https://steamcommunity.com/sharedfiles/filedetails/?id=1465072243
+Art made by Vagabond. Check out his [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1465072243]Fantasy Goblins[/url] mod
 
-&lt;b&gt;&lt;size=15&gt;Another note (to be safe)&lt;/size&gt;&lt;/b&gt;&lt;size=4&gt;
+[b]Another note (to be safe)[/b]
+This is a mod for fun. There are no microtransactions. You can't buy any loot boxes from this mod with real money.
 
-&lt;/size&gt;This is a mod for fun. There are no microtransactions. You can't buy any loot boxes from this mod with real money.
-	</description>
+[h1]Support me on Ko-fi[/h1]
+If you enjoy my mods, please consider supporting me on Ko-fi. It really helps me motivating myself to keep on working on my projects. Thank you.
+[url=https://ko-fi.com/F1F6JCJV][img]http://i.imgur.com/YE81xKZ.png[/img][/url]
+
+[img]https://i.imgur.com/PwoNOj4.png[/img]
+[list]
+[*] See if the the error persists if you just have this mod and its requirements active.
+[*] If not, try adding your other mods until it happens again.
+[*] Post your error-log using [url=https://steamcommunity.com/workshop/filedetails/?id=818773962]HugsLib[/url] or the standalone [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2873415404]Uploader[/url] and command Ctrl+F12
+[*] For best support, please use the Discord-channel for error-reporting.
+[*] Do not report errors by making a discussion-thread, I get no notification of that.
+[*] If you have the solution for a problem, please post it to the GitHub repository.
+[*] Use [url=https://github.com/RimSort/RimSort/releases/latest]RimSort[/url] to sort your mods
+[/list]</description>
+  <modVersion IgnoreIfNoMatchingField="True">1.5.1</modVersion>
 </ModMetaData>

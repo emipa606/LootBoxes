@@ -1,0 +1,142 @@
+using System.Collections.Generic;
+using Lanilor.LootBoxes.Mod;
+
+namespace Lanilor.LootBoxes.Things;
+
+public class CompUseEffectLootBoxSilverLarge : CompUseEffectLootBox
+{
+    protected override LootBoxType LootBoxType => LootBoxType.SilverL;
+
+    protected override int SetMinimum => ModLootBoxes.Settings?.SetMinSilverL ?? 1;
+
+    protected override int SetMaximum => ModLootBoxes.Settings?.SetMaxSilverL ?? 12;
+
+    protected override float MaximumMarketRewardValue => ModLootBoxes.Settings?.SilverLRewardValue ?? 600f;
+
+    protected override IEnumerable<LootboxReward> RewardTable
+    {
+        get
+        {
+            var list = new List<LootboxReward>
+            {
+                new LootboxReward(8f, new Reward("MealSurvivalPack", 1, 2, 10)),
+                new LootboxReward(10f, new Reward("MealNutrientPaste", 2, 3, 15)),
+                new LootboxReward(10f, new Reward("MealSimple", 2, 3, 20)),
+                new LootboxReward(9f, new Reward("MealFine", 2, 3, 15)),
+                new LootboxReward(8f, new Reward("MealLavish", 1, 2, 10)),
+                new LootboxReward(10f, new Reward("Kibble", 2, 5, 50)),
+                new LootboxReward(7f, new Reward("Chocolate", 1, 2, 15)),
+                new LootboxReward(6f, new Reward("InsectJelly", 2, 5, 50)),
+                new LootboxReward(6f, new Reward("MealSimple", 1, 2, 10), new Reward("MealFine", 1, 2, 10),
+                    new Reward("MealLavish", 1, 2, 5)),
+                new LootboxReward(9f, new Reward("Beer", 2, 5, 15)),
+                new LootboxReward(9f, new Reward("SmokeleafJoint", 2, 5, 15)),
+                new LootboxReward(1f, new Reward("GoJuice", 1, 1, 5)),
+                new LootboxReward(3f, new Reward("Penoxycyline", 1, 1, 5)),
+                new LootboxReward(5f, new Reward("Yayo", 1, 2, 10)),
+                new LootboxReward(4f, new Reward("WakeUp", 1, 2, 8)),
+                new LootboxReward(5f, new Reward("Beer", 2, 5, 15), new Reward("SmokeleafJoint", 2, 5, 15),
+                    new Reward("Yayo", 1, 1, 5)),
+                new LootboxReward(2f, new Reward("SmokeleafJoint", 1, 2, 10), new Reward("GoJuice", 1, 1, 3),
+                    new Reward("Yayo", 1, 1, 5), new Reward("WakeUp", 1, 1, 5)),
+                new LootboxReward(2f, new Reward("SimpleProstheticLeg")),
+                new LootboxReward(2f, new Reward("SimpleProstheticArm")),
+                new LootboxReward(2f, new Reward("SimpleProstheticHeart")),
+                new LootboxReward(2f, new Reward("CochlearImplant")),
+                new LootboxReward(1f, new Reward("BionicEye")),
+                new LootboxReward(1f, new Reward("BionicArm")),
+                new LootboxReward(1f, new Reward("BionicLeg")),
+                new LootboxReward(1f, new Reward("BionicSpine")),
+                new LootboxReward(1f, new Reward("BionicHeart")),
+                new LootboxReward(1f, new Reward("BionicStomach")),
+                new LootboxReward(1f, new Reward("BionicEar")),
+                new LootboxReward(6f, new Reward("MedicineIndustrial", 1, 1, 6)),
+                new LootboxReward(3f, new Reward("MedicineIndustrial", 1, 2, 15)),
+                new LootboxReward(7f, new Reward("ComponentIndustrial", 1, 1, 6)),
+                new LootboxReward(4f, new Reward("Neutroamine", 1, 2, 20)),
+                new LootboxReward(6f, new Reward("Chemfuel", 5, 10, 100)),
+                new LootboxReward(7f, new Reward("Shell_HighExplosive", 1, 1, 7)),
+                new LootboxReward(4f, new Reward("Shell_HighExplosive", 1, 2, 20)),
+                new LootboxReward(7f, new Reward("Shell_Incendiary", 1, 1, 7)),
+                new LootboxReward(4f, new Reward("Shell_Incendiary", 5, 2, 20)),
+                new LootboxReward(6f, new Reward("Shell_EMP", 1, 1, 5)),
+                new LootboxReward(6f, new Reward("Shell_Firefoam", 1, 1, 5)),
+                new LootboxReward(3f, new Reward("Shell_HighExplosive", 1, 1, 10),
+                    new Reward("Shell_Incendiary", 1, 1, 10), new Reward("Shell_EMP", 1, 1, 2),
+                    new Reward("Shell_Firefoam", 1, 1, 2)),
+                new LootboxReward(3f, new Reward("ElephantTusk", 1, 1, 4)),
+                new LootboxReward(1f, new Reward("Apparel_PsychicInsanityLance")),
+                new LootboxReward(1f, new Reward("Apparel_PsychicShockLance")),
+                new LootboxReward(1f, new Reward("PsychicAnimalPulser")),
+                new LootboxReward(1f, new Reward("PsychicSoothePulser")),
+                new LootboxReward(3f, new Reward("MeleeWeapon_Mace", 1, 1, 3)),
+                new LootboxReward(3f, new Reward("MeleeWeapon_LongSword", 1, 1, 3)),
+                new LootboxReward(3f, new Reward("MeleeWeapon_Spear", 1, 1, 3)),
+                new LootboxReward(4f, new Reward("Gun_Revolver", 1, 1, 3)),
+                new LootboxReward(4f, new Reward("Gun_Autopistol", 1, 1, 3)),
+                new LootboxReward(3f, new Reward("Gun_MachinePistol", 1, 1, 2)),
+                new LootboxReward(2f, new Reward("Gun_IncendiaryLauncher")),
+                new LootboxReward(3f, new Reward("Gun_BoltActionRifle", 1, 1, 2)),
+                new LootboxReward(3f, new Reward("Gun_PumpShotgun", 1, 1, 2)),
+                new LootboxReward(1f, new Reward("Gun_ChainShotgun")),
+                new LootboxReward(1f, new Reward("Gun_HeavySMG")),
+                new LootboxReward(1f, new Reward("Gun_LMG")),
+                new LootboxReward(1f, new Reward("Gun_AssaultRifle")),
+                new LootboxReward(1f, new Reward("Gun_SniperRifle")),
+                new LootboxReward(2f, new Reward("Weapon_GrenadeFrag")),
+                new LootboxReward(2f, new Reward("Weapon_GrenadeMolotov")),
+                new LootboxReward(2f, new Reward("Weapon_GrenadeEMP")),
+                new LootboxReward(2f, new Reward("Apparel_ShieldBelt", 1, 1, 2)),
+                new LootboxReward(3f, new Reward("Apparel_SmokepopBelt", 1, 1, 3)),
+                new LootboxReward(4f, new Reward("Apparel_CowboyHat", 1, 1, 4)),
+                new LootboxReward(4f, new Reward("Apparel_BowlerHat", 1, 1, 4)),
+                new LootboxReward(4f, new Reward("Apparel_Tuque", 1, 1, 4)),
+                new LootboxReward(4f, new Reward("Apparel_SimpleHelmet", 1, 1, 3)),
+                new LootboxReward(3f, new Reward("Apparel_AdvancedHelmet", 1, 1, 2)),
+                new LootboxReward(4f, new Reward("Apparel_Parka", 1, 1, 2)),
+                new LootboxReward(4f, new Reward("Apparel_Pants", 1, 1, 3)),
+                new LootboxReward(4f, new Reward("Apparel_BasicShirt", 1, 1, 3)),
+                new LootboxReward(4f, new Reward("Apparel_CollarShirt", 1, 1, 3)),
+                new LootboxReward(4f, new Reward("Apparel_Duster", 1, 1, 2)),
+                new LootboxReward(2f, new Reward("Apparel_PlateArmor")),
+                new LootboxReward(2f, new Reward("Apparel_FlakVest")),
+                new LootboxReward(2f, new Reward("Apparel_FlakPants")),
+                new LootboxReward(2f, new Reward("Apparel_FlakJacket")),
+                new LootboxReward(1f, new Reward("Apparel_SimpleHelmet"), new Reward("Apparel_PlateArmor")),
+                new LootboxReward(7f, new Reward("Silver", 20, 30, 50)),
+                new LootboxReward(3f, new Reward("Silver", 20, 30, 300)),
+                new LootboxReward(5f, new Reward("Gold", 1, 2, 10)),
+                new LootboxReward(1f, new Reward("Gold", 1, 2, 30)),
+                new LootboxReward(10f, new Reward("Steel", 10, 20, 50)),
+                new LootboxReward(4f, new Reward("Steel", 10, 20, 250)),
+                new LootboxReward(5f, new Reward("Plasteel", 1, 2, 10)),
+                new LootboxReward(1f, new Reward("Plasteel", 2, 5, 50)),
+                new LootboxReward(10f, new Reward("WoodLog", 10, 20, 75)),
+                new LootboxReward(4f, new Reward("WoodLog", 10, 20, 300)),
+                new LootboxReward(3f, new Reward("Uranium", 2, 5, 10)),
+                new LootboxReward(6f, new Reward("Jade", 2, 5, 10)),
+                new LootboxReward(2f, new Reward("Jade", 2, 5, 75)),
+                new LootboxReward(7f, new Reward("Steel", 10, 20, 50), new Reward("WoodLog", 10, 20, 50)),
+                new LootboxReward(8f, new Reward("Cloth", 10, 20, 50)),
+                new LootboxReward(3f, new Reward("Cloth", 10, 20, 250)),
+                new LootboxReward(4f, new Reward("Synthread", 5, 10, 75)),
+                new LootboxReward(1f, new Reward("Synthread", 10, 20, 250)),
+                new LootboxReward(2f, new Reward("DevilstrandCloth", 5, 10, 50)),
+                new LootboxReward(1f, new Reward("Hyperweave", 2, 3, 20)),
+                new LootboxReward(3f, new Reward("Leather_Panthera", 5, 10, 75)),
+                new LootboxReward(3f, new Reward("Leather_Camel", 5, 10, 75)),
+                new LootboxReward(3f, new Reward("Leather_Bluefur", 5, 10, 75)),
+                new LootboxReward(3f, new Reward("Leather_Bear", 5, 10, 75)),
+                new LootboxReward(2f, new Reward("Leather_Elephant", 5, 10, 60)),
+                new LootboxReward(2f, new Reward("Leather_Heavy", 5, 10, 60)),
+                new LootboxReward(2f, new Reward("Leather_Rhinoceros", 5, 10, 50)),
+                new LootboxReward(1f, new Reward("Leather_Thrumbo", 5, 10, 50)),
+                new LootboxReward(2f, new Reward("LootBoxTreasure")),
+                new LootboxReward(3f, new Reward("LootBoxSilverSmall")),
+                new LootboxReward(1f, new Reward("LootBoxSilverLarge")),
+                new LootboxReward(1f, new Reward("LootBoxPandora"))
+            };
+            return list;
+        }
+    }
+}
