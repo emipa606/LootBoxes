@@ -24,7 +24,7 @@ public abstract class CompUseEffectLootBox : CompUseEffect
     public override void DoEffect(Pawn usedBy)
     {
         base.DoEffect(usedBy);
-        SoundDefOf.PsychicPulseGlobal.PlayOneShotOnCamera(usedBy.MapHeld);
+        LootboxDefOf.LootBoxOpening.PlayOneShotOnCamera(usedBy.MapHeld);
         usedBy.records.Increment(LootboxDefOf.LootBoxesOpened);
         OpenBox(usedBy);
     }

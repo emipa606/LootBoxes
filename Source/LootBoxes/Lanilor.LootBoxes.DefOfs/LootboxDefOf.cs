@@ -6,6 +6,7 @@ namespace Lanilor.LootBoxes.DefOfs;
 [DefOf]
 public static class LootboxDefOf
 {
+    public static SoundDef LootBoxOpening;
     public static ThingDef LootBoxTreasure;
     public static ThingDef LootBoxSilverSmall;
     public static ThingDef LootBoxSilverLarge;

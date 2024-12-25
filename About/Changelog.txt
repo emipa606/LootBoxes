@@ -1,5 +1,8 @@
 # Changelog for LootBoxes
 
+1.5.2 - Moved the opening soundDef to xml instead to allow for patching
+
+
 1.5.1 - Updated for 1.5, added dev open gizmo
 Used DeepL to update translations for ChineseSimplified, French, German, Spanish
 

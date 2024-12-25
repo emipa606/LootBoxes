@@ -116,10 +116,6 @@ Art made by Vagabond. Check out his [url=https://steamcommunity.com/sharedfiles/
 [b]Another note (to be safe)[/b]
 This is a mod for fun. There are no microtransactions. You can't buy any loot boxes from this mod with real money.
 
-[h1]Support me on Ko-fi[/h1]
-If you enjoy my mods, please consider supporting me on Ko-fi. It really helps me motivating myself to keep on working on my projects. Thank you.
-[url=https://ko-fi.com/F1F6JCJV][img]http://i.imgur.com/YE81xKZ.png[/img][/url]
-
 [img]https://i.imgur.com/PwoNOj4.png[/img]
 [list]
 [*] See if the the error persists if you just have this mod and its requirements active.
@@ -129,6 +125,8 @@ If you enjoy my mods, please consider supporting me on Ko-fi. It really helps me
 [*] Do not report errors by making a discussion-thread, I get no notification of that.
 [*] If you have the solution for a problem, please post it to the GitHub repository.
 [*] Use [url=https://github.com/RimSort/RimSort/releases/latest]RimSort[/url] to sort your mods
-[/list]</description>
-  <modVersion IgnoreIfNoMatchingField="True">1.5.1</modVersion>
+[/list] 
+
+[url=https://steamcommunity.com/sharedfiles/filedetails/changelog/3258852853][img]https://img.shields.io/github/v/release/emipa606/LootBoxes?label=latest%20version&amp;style=plastic&amp;color=9f1111&amp;labelColor=black[/img][/url] | tags:  rewards,  random events</description>
+  <modVersion IgnoreIfNoMatchingField="True">1.5.2</modVersion>
 </ModMetaData>

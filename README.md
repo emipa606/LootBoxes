@@ -1,6 +1,7 @@
-# [Loot Boxes (Continued)]()
+# [Loot Boxes (Continued)](https://steamcommunity.com/sharedfiles/filedetails/?id=3258852853)
 
 ![Image](https://i.imgur.com/buuPQel.png)
+
 Update of Lanilors mod https://steamcommunity.com/sharedfiles/filedetails/?id=1560291802
 based on the update by Pustalorc https://steamcommunity.com/sharedfiles/filedetails/?id=2191113747
 
@@ -35,6 +36,7 @@ based on the update by Pustalorc https://steamcommunity.com/sharedfiles/filedeta
 ![Image](https://i.imgur.com/pufA0kM.png)
 	
 ![Image](https://i.imgur.com/Z4GOv8H.png)
+
 # No joke/meme mod! Add loot boxes and Pandoras box to the game and gamble for the ultimate treasure and challenges!
 
 
@@ -89,25 +91,23 @@ Does only contain vanilla items. I value good balancing in my mods and to do thi
 
 Can be added to existing saves. To remove it, be sure to remove all objects from this mod from your world first. (Like the loot boxes itself, of course you can keep the loot you got out of them.)
 
-Art made by Vagabond. Check out his [https://steamcommunity.com/sharedfiles/filedetails/?id=1465072243](Fantasy Goblins) mod
+Art made by Vagabond. Check out his [Fantasy Goblins](https://steamcommunity.com/sharedfiles/filedetails/?id=1465072243) mod
 
 **Another note (to be safe)**
 This is a mod for fun. There are no microtransactions. You can't buy any loot boxes from this mod with real money.
 
-# Support me on Ko-fi
-
-If you enjoy my mods, please consider supporting me on Ko-fi. It really helps me motivating myself to keep on working on my projects. Thank you.
-[https://ko-fi.com/F1F6JCJV]![Image]((http://i.imgur.com/YE81xKZ.png))
-
 ![Image](https://i.imgur.com/PwoNOj4.png)
+
 
 
 -  See if the the error persists if you just have this mod and its requirements active.
 -  If not, try adding your other mods until it happens again.
--  Post your error-log using [https://steamcommunity.com/workshop/filedetails/?id=818773962]HugsLib[/url] or the standalone [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2873415404](Uploader) and command Ctrl+F12
+-  Post your error-log using [HugsLib](https://steamcommunity.com/workshop/filedetails/?id=818773962) or the standalone [Uploader](https://steamcommunity.com/sharedfiles/filedetails/?id=2873415404) and command Ctrl+F12
 -  For best support, please use the Discord-channel for error-reporting.
 -  Do not report errors by making a discussion-thread, I get no notification of that.
 -  If you have the solution for a problem, please post it to the GitHub repository.
--  Use [https://github.com/RimSort/RimSort/releases/latest](RimSort) to sort your mods
+-  Use [RimSort](https://github.com/RimSort/RimSort/releases/latest) to sort your mods
 
+ 
 
+[![Image](https://img.shields.io/github/v/release/emipa606/LootBoxes?label=latest%20version&style=plastic&color=9f1111&labelColor=black)](https://steamcommunity.com/sharedfiles/filedetails/changelog/3258852853) | tags:  rewards,  random events
