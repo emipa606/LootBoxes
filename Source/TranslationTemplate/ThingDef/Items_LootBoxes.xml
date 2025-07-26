@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: large golden chest -->
+  <LootBoxGoldLarge.label>large golden chest</LootBoxGoldLarge.label>
+  <!-- EN: A large golden loot box. Fulfill all your dreams with this extraordinary loot crate! The highest chance to get the best and most expensive items! -->
+  <LootBoxGoldLarge.description>A large golden loot box. Fulfill all your dreams with this extraordinary loot crate! The highest chance to get the best and most expensive items!</LootBoxGoldLarge.description>
+  <!-- EN: Open box -->
+  <LootBoxGoldLarge.comps.CompUsable.useLabel>Open box</LootBoxGoldLarge.comps.CompUsable.useLabel>
+  <!-- EN: small golden chest -->
+  <LootBoxGoldSmall.label>small golden chest</LootBoxGoldSmall.label>
+  <!-- EN: A small golden loot box. There may be some really nice stuff in here! Get a change to receive some of the best items on the rim! -->
+  <LootBoxGoldSmall.description>A small golden loot box. There may be some really nice stuff in here! Get a change to receive some of the best items on the rim!</LootBoxGoldSmall.description>
+  <!-- EN: Open box -->
+  <LootBoxGoldSmall.comps.CompUsable.useLabel>Open box</LootBoxGoldSmall.comps.CompUsable.useLabel>
+  <!-- EN: pandoras box -->
+  <LootBoxPandora.label>pandoras box</LootBoxPandora.label>
+  <!-- EN: Pandoras box. What may be in here? -->
+  <LootBoxPandora.description>Pandoras box. What may be in here?</LootBoxPandora.description>
+  <!-- EN: Open box -->
+  <LootBoxPandora.comps.CompUsable.useLabel>Open box</LootBoxPandora.comps.CompUsable.useLabel>
+  <!-- EN: large common chest -->
+  <LootBoxSilverLarge.label>large common chest</LootBoxSilverLarge.label>
+  <!-- EN: A large common loot box. The true test of luck! Open it and you may get something awesome or many useful items. Or both! -->
+  <LootBoxSilverLarge.description>A large common loot box. The true test of luck! Open it and you may get something awesome or many useful items. Or both!</LootBoxSilverLarge.description>
+  <!-- EN: Open box -->
+  <LootBoxSilverLarge.comps.CompUsable.useLabel>Open box</LootBoxSilverLarge.comps.CompUsable.useLabel>
+  <!-- EN: small common chest -->
+  <LootBoxSilverSmall.label>small common chest</LootBoxSilverSmall.label>
+  <!-- EN: A small common loot box. Open it and get a change to receive powerful and valuable items! -->
+  <LootBoxSilverSmall.description>A small common loot box. Open it and get a change to receive powerful and valuable items!</LootBoxSilverSmall.description>
+  <!-- EN: Open box -->
+  <LootBoxSilverSmall.comps.CompUsable.useLabel>Open box</LootBoxSilverSmall.comps.CompUsable.useLabel>
+  <!-- EN: treasure chest -->
+  <LootBoxTreasure.label>treasure chest</LootBoxTreasure.label>
+  <!-- EN: A golden treasure chest. Fort knox in a box! Become the richest colony in the galaxy with a little bit of luck! -->
+  <LootBoxTreasure.description>A golden treasure chest. Fort knox in a box! Become the richest colony in the galaxy with a little bit of luck!</LootBoxTreasure.description>
+  <!-- EN: Open box -->
+  <LootBoxTreasure.comps.CompUsable.useLabel>Open box</LootBoxTreasure.comps.CompUsable.useLabel>
+</LanguageData>

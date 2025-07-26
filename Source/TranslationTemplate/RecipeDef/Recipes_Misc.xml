@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: get large golden chest -->
+  <Make_LootBox_GoldLarge.label>get large golden chest</Make_LootBox_GoldLarge.label>
+  <!-- EN: Exchange silver and gold to get a large golden loot box. -->
+  <Make_LootBox_GoldLarge.description>Exchange silver and gold to get a large golden loot box.</Make_LootBox_GoldLarge.description>
+  <!-- EN: Getting loot box. -->
+  <Make_LootBox_GoldLarge.jobString>Getting loot box.</Make_LootBox_GoldLarge.jobString>
+  <!-- EN: get small golden chest -->
+  <Make_LootBox_GoldSmall.label>get small golden chest</Make_LootBox_GoldSmall.label>
+  <!-- EN: Exchange silver and gold to get a small golden loot box. -->
+  <Make_LootBox_GoldSmall.description>Exchange silver and gold to get a small golden loot box.</Make_LootBox_GoldSmall.description>
+  <!-- EN: Getting loot box. -->
+  <Make_LootBox_GoldSmall.jobString>Getting loot box.</Make_LootBox_GoldSmall.jobString>
+  <!-- EN: get pandoras box -->
+  <Make_LootBox_Pandora.label>get pandoras box</Make_LootBox_Pandora.label>
+  <!-- EN: Exchange jade to get a pandoras box. -->
+  <Make_LootBox_Pandora.description>Exchange jade to get a pandoras box.</Make_LootBox_Pandora.description>
+  <!-- EN: Getting loot box. -->
+  <Make_LootBox_Pandora.jobString>Getting loot box.</Make_LootBox_Pandora.jobString>
+  <!-- EN: get large common chest -->
+  <Make_LootBox_SilverLarge.label>get large common chest</Make_LootBox_SilverLarge.label>
+  <!-- EN: Exchange silver to get a large common loot box. -->
+  <Make_LootBox_SilverLarge.description>Exchange silver to get a large common loot box.</Make_LootBox_SilverLarge.description>
+  <!-- EN: Getting loot box. -->
+  <Make_LootBox_SilverLarge.jobString>Getting loot box.</Make_LootBox_SilverLarge.jobString>
+  <!-- EN: get small common chest -->
+  <Make_LootBox_SilverSmall.label>get small common chest</Make_LootBox_SilverSmall.label>
+  <!-- EN: Exchange silver to get a small common loot box. -->
+  <Make_LootBox_SilverSmall.description>Exchange silver to get a small common loot box.</Make_LootBox_SilverSmall.description>
+  <!-- EN: Getting loot box. -->
+  <Make_LootBox_SilverSmall.jobString>Getting loot box.</Make_LootBox_SilverSmall.jobString>
+  <!-- EN: get treasure chest -->
+  <Make_LootBox_Treasure.label>get treasure chest</Make_LootBox_Treasure.label>
+  <!-- EN: Exchange silver to get a golden treasure chest. -->
+  <Make_LootBox_Treasure.description>Exchange silver to get a golden treasure chest.</Make_LootBox_Treasure.description>
+  <!-- EN: Getting loot box. -->
+  <Make_LootBox_Treasure.jobString>Getting loot box.</Make_LootBox_Treasure.jobString>
+</LanguageData>

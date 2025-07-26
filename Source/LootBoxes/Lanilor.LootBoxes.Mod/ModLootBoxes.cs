@@ -170,25 +170,28 @@ public class ModLootBoxes : Verse.Mod
 
         listing_Standard.Label($"LootBoxes_Settings{m_Selected}Button".Translate());
         listing_Standard.Gap();
-        listing_Standard.Label(string.Concat("LootBoxes_SettingsMinSet".Translate(), num.ToString()), -1f,
+        listing_Standard.Label((TaggedString)string.Concat("LootBoxes_SettingsMinSet".Translate(), num.ToString()), -1f,
             "LootBoxes_MinSetTooltip".Translate());
         listing_Standard.Gap();
         num = Math.Min(num2,
             (int)Widgets.HorizontalSlider(listing_Standard.GetRect(20f), num, 1f, 50f, false, null, "1", "50", 1f));
         listing_Standard.Gap();
-        listing_Standard.Label(string.Concat("LootBoxes_SettingsMaxSet".Translate(), num2.ToString()), -1f,
+        listing_Standard.Label((TaggedString)string.Concat("LootBoxes_SettingsMaxSet".Translate(), num2.ToString()),
+            -1f,
             "LootBoxes_MaxSetTooltip".Translate());
         listing_Standard.Gap();
         num2 = Math.Max(num,
             (int)Widgets.HorizontalSlider(listing_Standard.GetRect(20f), num2, 1f, 50f, false, null, "1", "50", 1f));
         listing_Standard.Gap();
-        listing_Standard.Label(string.Concat("LootBoxes_SettingsRewardValue".Translate(), value.ToString()), -1f,
+        listing_Standard.Label(
+            (TaggedString)string.Concat("LootBoxes_SettingsRewardValue".Translate(), value.ToString()), -1f,
             "LootBoxes_RewardValueTooltip".Translate());
         listing_Standard.Gap();
         value = (int)Widgets.HorizontalSlider(listing_Standard.GetRect(20f), value, 10f, 5000f, false, null, "10",
             "5000", 10f);
         listing_Standard.Gap();
-        listing_Standard.Label(string.Concat("LootBoxes_SettingsLootboxChanceMult".Translate(), value2.ToString(), "x"),
+        listing_Standard.Label(
+            (TaggedString)string.Concat("LootBoxes_SettingsLootboxChanceMult".Translate(), value2.ToString(), "x"),
             -1f, "LootBoxes_LootboxChanceMultTooltip".Translate());
         listing_Standard.Gap();
         value2 = Widgets.HorizontalSlider(listing_Standard.GetRect(20f), value2, 0f, 10f, false, null, "0x", "10x",

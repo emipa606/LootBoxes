@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: loot boxes opened -->
+  <LootBoxesOpened.label>loot boxes opened</LootBoxesOpened.label>
+  <!-- EN: The number of loot boxes I have opened. -->
+  <LootBoxesOpened.description>The number of loot boxes I have opened.</LootBoxesOpened.description>
+</LanguageData>

@@ -10,7 +10,7 @@ namespace Lanilor.LootBoxes.Things;
 public class CompUseEffectLootBoxPandora : CompUseEffectLootBox
 {
     private static readonly Dictionary<List<IncidentCategoryDef>, IncidentGroupData> IncidentGroups =
-        new Dictionary<List<IncidentCategoryDef>, IncidentGroupData>
+        new()
         {
             {
                 [
@@ -100,7 +100,7 @@ public class CompUseEffectLootBoxPandora : CompUseEffectLootBox
             return 1f;
         }
 
-        var count = PawnsFinder.AllMapsCaravansAndTravelingTransportPods_Alive_Colonists.Count;
+        var count = PawnsFinder.AllMapsCaravansAndTravellingTransporters_Alive_Colonists.Count;
         return def.chanceFactorByPopulationCurve.Evaluate(count);
     }
 

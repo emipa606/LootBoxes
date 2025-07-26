@@ -1,0 +1,29 @@
+ManifestFileVersion: 0
+CRC: 30015006
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: fb4a9ba79c899c459f81d88957a91c22
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 2612ac43db082a73502ee80f2eceb73f
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: fb4a9ba79c899c459f81d88957a91c22
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Data/Mlie.LootBoxes/Textures/Things/Building/Misc/BigBox_south.png
+- Assets/Data/Mlie.LootBoxes/Textures/Things/Item/LootBox/GoldSmall.png
+- Assets/Data/Mlie.LootBoxes/Textures/Things/Item/LootBox/SilverSmall.png
+- Assets/Data/Mlie.LootBoxes/Textures/UI/Icons/ThingCategories/LootBoxes.png
+- Assets/Data/Mlie.LootBoxes/Textures/Things/Item/LootBox/PandorasBox.png
+- Assets/Data/Mlie.LootBoxes/Textures/Things/Item/LootBox/GoldLarge.png
+- Assets/Data/Mlie.LootBoxes/Textures/Things/Item/LootBox/TreasureBox.png
+- Assets/Data/Mlie.LootBoxes/Textures/Things/Item/LootBox/SilverLarge.png
+- Assets/Data/Mlie.LootBoxes/Textures/Things/Building/Misc/BigBox_east.png
+- Assets/Data/Mlie.LootBoxes/Textures/Things/Building/Misc/BigBox_north.png
+Dependencies: []
