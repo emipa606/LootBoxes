@@ -6,4 +6,34 @@
     <BuildType Name="Release" />
   </Configurations>
   <Project Path="LootBoxes/LootBoxes.csproj" />
+  <Folder Name="/XML/1.7/Defs/RecipeDefs/">
+    <File Path="../1.7/Defs/RecipeDefs/Recipes_Misc.xml" />
+  </Folder>
+  <Folder Name="/XML/1.7/Defs/ThingDefs_Buildings/">
+    <File Path="../1.7/Defs/ThingDefs_Buildings/Buildings_Misc.xml" />
+  </Folder>
+  <Folder Name="/XML/About/">
+    <File Path="../About/about.xml" />
+  </Folder>
+  <Folder Name="/XML/1.7/Defs/WorkGiverDefs/">
+    <File Path="../1.7/Defs/WorkGiverDefs/WorkGivers.xml" />
+  </Folder>
+  <Folder Name="/XML/Languages/English/Keyed/">
+    <File Path="../Languages/English/Keyed/Keyed-English.xml" />
+  </Folder>
+  <Folder Name="/XML/1.7/Defs/Misc/">
+    <File Path="../1.7/Defs/Misc/OpeningSound.xml" />
+  </Folder>
+  <Folder Name="/XML/1.7/Defs/Misc/RecordDefs/">
+    <File Path="../1.7/Defs/Misc/RecordDefs/Records_Misc.xml" />
+  </Folder>
+  <Folder Name="/XML/1.7/Defs/JobDefs/">
+    <File Path="../1.7/Defs/JobDefs/Jobs_Misc.xml" />
+  </Folder>
+  <Folder Name="/XML/1.7/Defs/ThingCategoryDefs/">
+    <File Path="../1.7/Defs/ThingCategoryDefs/ThingCategories.xml" />
+  </Folder>
+  <Folder Name="/XML/1.7/Defs/ThingDefs_Items/">
+    <File Path="../1.7/Defs/ThingDefs_Items/Items_LootBoxes.xml" />
+  </Folder>
 </Solution>

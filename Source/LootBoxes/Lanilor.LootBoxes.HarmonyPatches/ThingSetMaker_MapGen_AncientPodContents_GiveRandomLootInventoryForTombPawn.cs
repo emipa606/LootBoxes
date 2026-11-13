@@ -6,7 +6,7 @@ using Verse;
 namespace Lanilor.LootBoxes.HarmonyPatches;
 
 [HarmonyPatch(typeof(ThingSetMaker_MapGen_AncientPodContents), "GiveRandomLootInventoryForTombPawn")]
-public class ThingSetMaker_MapGen_AncientPodContents_GiveRandomLootInventoryForTombPawn
+public static class ThingSetMaker_MapGen_AncientPodContents_GiveRandomLootInventoryForTombPawn
 {
     public static void Postfix(Pawn p)
     {
